@@ -36,7 +36,7 @@ function started() {
 
 clickSound = new Audio("../assets/sounds/click.mp3")
 
-let startBtn = document.getElementById("start")
+let startBtn = document.getElementById("starter")
 let titleScreen = document.querySelector(".main")
 let mainMenu = document.querySelector(".mainMenu")
 
@@ -62,6 +62,12 @@ function startKiller() {
     what.classList.remove("down");
     how.classList.remove("down");
     how.classList.remove("down2");
+
+    audio.pause()
+        music = false;
+        play.classList.remove("active")
+        document.getElementById('lofi').innerHTML =
+    "music : Off";
 }
 
 
