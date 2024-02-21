@@ -5,11 +5,11 @@
 
 @font-face {
     font-family: "gameboy";
-    src: url(/fonts/EarlyGameBoy.ttf);
+    src: url(../../fonts/EarlyGameBoy.ttf);
 }
 @font-face {
     font-family: "Wendel";
-    src: url(/fonts/WendelinFettKursiv.ttf);
+    src: url(../../fonts/WendelinFettKursiv.ttf);
 }
 
 
@@ -357,7 +357,6 @@
                     gap: 120px;
                     overflow-y: scroll;
                     scroll-snap-type: y mandatory;
-                    font-family: "DM Sans", sans-serif;
                     font-family: "DM Sans", sans-serif;
                     font-size: 1.3rem;
                     font-weight: 700;
