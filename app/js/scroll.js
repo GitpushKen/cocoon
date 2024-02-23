@@ -50,6 +50,10 @@ const navBtns = document.querySelectorAll(".nav-bar ul li a");
 
 
 navBtns.forEach(item => {
+    item.addEventListener("click", function (m) {
+        soundToggle.volume = 0.50;
+        soundToggle.play();
+    })
     item.addEventListener("click", function(e) {
         for(let i = 0; i < navBtns.length; i++) {
             navBtns[i].classList.remove("active");
@@ -58,3 +62,7 @@ navBtns.forEach(item => {
     });
 });
 
+
+let soundToggle = new Audio("../../assets/sounds/switch.wav")
+
+item.addEventListener("click", playMusic)
