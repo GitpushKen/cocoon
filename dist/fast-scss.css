@@ -57,9 +57,10 @@ a, a:visited, a:active {
   src: url(../fonts/INFINITY/MADEINFINITYPersonalUse-Black.otf);
 }
 body {
-  background-color: #f1f1f1;
+  background-color: #F3EEEA;
   height: 100svh;
   width: 100svw;
+  color: #776B5D;
 }
 
 ::-webkit-scrollbar {
@@ -68,11 +69,10 @@ body {
 
 .nav-bar {
   position: absolute;
-  right: 7px;
+  right: 10px;
   align-self: center;
   height: 90vh;
   display: flex;
-  opacity: 50%;
   /* &::after {
       content: "";
       position: absolute;
@@ -89,7 +89,8 @@ body {
   width: 3px;
   right: 1.5px;
   height: calc(100% - 40px);
-  background-color: rgb(141, 141, 141);
+  background-color: #B0A695;
+  opacity: 50%;
   margin-top: 20px;
   z-index: -1;
 }
@@ -108,12 +109,12 @@ a::before {
   rotate: -90deg;
   width: 20px;
   border-radius: 10px;
-  background-color: rgb(141, 141, 141);
+  background-color: #d0c5b3;
   transition: 0.5s;
 }
 
 a.active::before {
-  background-color: rgb(28, 28, 28);
+  background-color: #776B5D;
   rotate: -180deg;
 }
 
