@@ -205,3 +205,4 @@ function playMusic() {
 }
 
 play.addEventListener("click", playMusic)
+

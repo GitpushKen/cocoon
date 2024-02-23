@@ -1,0 +1,119 @@
+@forward '../app/scss/globals';
+
+@font-face {
+    font-family: "Cursive";
+    src: url(../fonts/ArthensFree.otf);
+}
+@font-face {
+    font-family: "IntegralXL";
+    src: url(../fonts/INTEGRAL/Fontspring-DEMO-integralcf-extrabold.otf);
+}
+
+@font-face {
+    font-family: "Integral";
+    src: url(../fonts/INTEGRAL/Fontspring-DEMO-integralcf-medium.otf);
+}
+
+@font-face {
+    font-family: "Infinity Black";
+    src: url(../fonts/INFINITY/MADEINFINITYPersonalUse-Black.otf);
+}
+@font-face {
+    font-family: "Infinity";
+    src: url(../fonts/INFINITY/MADEINFINITYPersonalUse-Regular.otf);
+}
+
+
+body {
+    overflow-y: hidden;
+    height: 100svh;
+    width: 100svw;
+}
+
+h1, p {
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+
+
+    .mainText {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        background-color: #f1f1f1;
+        margin: 0;
+    }
+
+
+    .name {
+
+        padding: 40px 0 0 40px;
+
+        h1 {
+            font-size: 6rem;
+            
+        font-family: "Infinity Black";
+        }
+    
+        p {
+            font-size: 1.85rem;
+            font-family: "Infinity";
+        }
+    }
+
+    .pres-text {
+
+        padding-left: 40px;
+        padding-top: 40px;
+        padding-right: 70px;
+        width: 40rem;
+        font-family: "Infinity";
+        text-align:justify;
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    .bloc-2 {
+        padding: 40px 0 0 40px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+        font-size: 1.5rem;
+        font-family: "Infinity Black";
+        
+        .buttons {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+   
+    .main-pic {
+        height: 100%;
+
+        justify-self: right;
+
+        
+
+        img {
+            height: 100svh;
+            width: auto;
+        }
+    }
+}
