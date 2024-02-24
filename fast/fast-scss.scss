@@ -28,32 +28,42 @@ body {
     height: 100svh;
     width: 100svw;
     color: #776B5D;
-
-
+    overflow-y: hidden;
 }
+
 
 ::-webkit-scrollbar {
     display: none;
 }
 
 .nav-bar {
-position: absolute;
-right: 10px;
-align-self: center;
-height: 90vh;
-display: flex;
+    position: fixed;
+    align-self: center;
+    width: 90svw;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    justify-content: space-between;
+    transition: opacity 1s;
+    opacity: 0;
+    z-index: 100;
+
+    &.active {
+      opacity: 1;
+    }
 
 
 
     &::after {
               content: "";
-              position: relative;
-              width:3px;
-              right: 1.5px;
-              height: calc(100% - 40px);
+              position: absolute;
+              margin-left: 50px;
+              height:3px;
+              width: calc(100% - 50px);
               background-color: #B0A695;
               opacity: 50%;
-              margin-top: 20px;
+
               
 
               z-index: -1;
@@ -83,27 +93,27 @@ display: flex;
 a::before {
   content: "";
   position: absolute;
-  
   height: 10px;
-  rotate: -90deg;
+  rotate: 0deg;
   width: 20px;
   border-radius: 10px;
   background-color: #d0c5b3;
-  transition: 0.5s;
+  transition: 1.5s;
 
 }
 
 a.active::before {
   background-color: #776B5D;
-  rotate: -180deg;
+  rotate: 630deg;
 }
 
 
 ul {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  flex-direction: row;
   list-style: none;
+  justify-content: space-between;
 
 }
 
@@ -111,7 +121,6 @@ ul {
     height: 100svh;
     font-family: "DMSans Bold";
     scroll-behavior: smooth;
-    overflow-y: scroll;
 
 
 }
@@ -123,11 +132,19 @@ ul {
     display: flex;
     height: 100vh;
     width: 100vw;
+    opacity: 100%;
+    transition: opacity 2s;
     justify-content: center;
     align-items: center;
     font-family: "Infinite";
     flex-direction: column;
     scroll-snap-align: center;
+    rotate: 90deg;
+
+
+    &.hidden {
+      opacity: 0;
+    }
     
     h2 {
         opacity: 70%;
@@ -137,10 +154,71 @@ ul {
         height: 40px;
         opacity: 50%;
         rotate: -90deg;
+
+        
     }
     
     a::before {
       opacity: 0;
+    }
+
+
+    #enter {
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 60px;
+    }
+
+    .baseBtn {
+      border-radius: 10px;
+      width: 28px;
+      height: 8px;
+      background-color: #908271;
+      
+      animation: appear 3s ease-in-out infinite;
+
+      @keyframes appear {
+
+        0% {
+          opacity: 0;
+        }
+  
+        50% {
+          opacity: 100%;
+        }
+  
+        100% {
+          opacity: 0;
+        }
+      
+      }
+      
+    }
+
+    #btn-down {
+
+      animation: move 3s ease-in-out infinite;
+      align-self: center;
+      justify-self: center;
+      
+
+    }
+    @keyframes move {
+
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 100%;
+        transform: translateY(15px);
+      }
+
+      100% {
+        opacity: 0;
+      }
+    
     }
 }
 
@@ -168,17 +246,17 @@ ul {
     justify-content: center;
     height: 100svh;
     width: 100svw;
-    scroll-snap-align: center;
+    z-index: 50;
+    padding-bottom: 100px;
   }
 
   .box {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     width: 100%;
     height: 100%;
     object-fit: fill;
+    
     font-family: "Infinite";
     font-weight: 900;
     transition: ease-out 0.8s;
@@ -273,6 +351,9 @@ ul {
       grid-row: 1 / 2;
       transform: translateX(400%);
       opacity: 0;
+      overflow: visible;
+      padding-top: 6px;
+      object-fit: cover;
       transition-delay: 500ms;
 
       &.show {
@@ -327,6 +408,10 @@ ul {
       transform: translateX(100%);
       opacity: 0;
 
+      img {
+        width: 100%;
+      }
+
       &.show {
         transform: translateX(0%);
         opacity: 1;
@@ -353,6 +438,7 @@ ul {
       opacity: 0;
       transition-delay: 400ms;
 
+
       &.show {
         transform: translateX(0%);
         opacity: 1;
@@ -365,6 +451,7 @@ ul {
       transform: translateX(-400%);
       opacity: 0;
       transition-delay: 350ms;
+      
 
       &.show {
         transform: translateX(0%);

@@ -2,9 +2,11 @@
 const boxScrolled = document.querySelectorAll(".box");
 const aboutScrolled = document.querySelectorAll(".box");
 const contactScrolled = document.querySelectorAll(".box");
-const btnDown = document.getElementById("btn-down")
+const btnDown = document.getElementById("enter")
 const nav2Scrolled = document.getElementById('link2')
-const nav1Scrolled = document.getElementById("link1")
+const nav1Scrolled = document.getElementById("link1")   
+const navBar = document.querySelector(".nav-bar")
+const welcomeBtn = document.querySelector(".welcome-screen")
 
 
 
@@ -12,7 +14,7 @@ const watcher = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)
         if (entry.isIntersecting) {
-        entry.target.classList.add("show");
+            setTimeout(function(){entry.target.classList.add("show")},200);
     } else {
         entry.target.classList.remove("show");
         }
@@ -34,8 +36,12 @@ window.onload = (e) => {
 }
 
 function toggleBtn() {
-    nav2Scrolled.classList.add("active")
-    nav1Scrolled.classList.remove("active")
+    nav1Scrolled.classList.add("active")
+    navBar.classList.add("active")
+    welcomeBtn.classList.add("hidden")
+
+    soundToggle.volume = 0.50;
+        soundToggle.play();
 }
 
 
@@ -66,3 +72,4 @@ navBtns.forEach(item => {
 let soundToggle = new Audio("../../assets/sounds/switch.wav")
 
 item.addEventListener("click", playMusic)
+
