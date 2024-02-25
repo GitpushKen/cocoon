@@ -484,6 +484,8 @@
     .mobile {
         display: none;
     }
+
+
     body {
         overflow-y: hidden;
         height: 100svh;
@@ -494,6 +496,14 @@
         margin: 0;
     }
     
+    .desktop {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #f1f1f1;
+    }
+
     .main-container {
         display: flex;
         width: 100%;

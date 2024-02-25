@@ -1,4 +1,9 @@
-let bootAudio = new Audio("../assets/sounds/bootup.mp3")
+
+//////
+
+
+
+let bootAudio = new Audio("../../assets/sounds/bootup.mp3")
 let bootUp = document.getElementById("bootUp")
 let miniMe = document.querySelector(".miniMe")
 let titled = document.querySelector(".titled")
@@ -175,34 +180,36 @@ function startTime() {
     return i;
   };
 
-// music 
+
+
+  // 
+  
 
 const play = document.getElementById("lofi");
-let audio = new Audio("../assets/sounds/Lofi-sample.mp3")
+let audio = new Audio("../../assets/sounds/Lofi-sample.mp3")
 let music = false; 
 
 document.getElementById('lofi').innerHTML =
-    "music : Off";
+    "Lofi : Off";
 
 function playMusic() {
     if (!music) {;
     audio.play()
-    audio.volume = 0.45;
+    audio.volume = 0.25;
     music = true;
     console.log(music)
     play.classList.toggle("active")
     document.getElementById('lofi').innerHTML =
-    "music : On";
+    "Lofi : On";
 
     } else { 
         audio.pause()
         music = false;
         play.classList.remove("active")
         document.getElementById('lofi').innerHTML =
-    "music : Off";
+    "Lofi : Off";
 
     }
 }
 
-play.addEventListener("click", playMusic)
 
