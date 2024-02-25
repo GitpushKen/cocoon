@@ -75,6 +75,9 @@ a, a:visited, a:active {
     height: 100svh;
     background-color: #677956;
     overflow-y: hidden;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
   .mobile {
     width: 100svw;

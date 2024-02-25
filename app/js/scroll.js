@@ -100,7 +100,7 @@ window.onload = (e) => {
 }
 
 function boot() {
-    bootAudio.play();
+
     bootAudio.volume = 0.20;
     bootEnd = true;
     miniMe.classList.toggle("active");

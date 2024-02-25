@@ -51,6 +51,7 @@
       height: 100svh;
       background-color: #677956;
       overflow-y: hidden;
+      user-select: none;
   
   }
   
@@ -828,6 +829,7 @@ ul {
             padding-left: 0;
             backdrop-filter: blur(100px);
             font-family: "Infinite";
+
       
             p {
               width: 90%;
