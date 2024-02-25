@@ -1,12 +1,12 @@
 
 const boxScrolled = document.querySelectorAll(".box");
-const aboutScrolled = document.querySelectorAll(".box");
 const contactScrolled = document.querySelectorAll(".box");
 const btnDown = document.getElementById("enter")
 const nav2Scrolled = document.getElementById('link2')
 const nav1Scrolled = document.getElementById("link1")   
 const navBar = document.querySelector(".nav-bar")
 const welcomeBtn = document.querySelector(".welcome-screen")
+const aboutPage = document.querySelectorAll(".about")
 
 
 
@@ -23,6 +23,11 @@ const watcher = new IntersectionObserver((entries) => {
 
 
 btnDown.addEventListener("click", toggleBtn)
+nav2Scrolled.addEventListener("click", toggleAbout)
+
+function toggleAbout() {
+    aboutPage.classList.add("visible")
+}
 
 
 let navOn = true; 
@@ -40,14 +45,15 @@ function toggleBtn() {
     navBar.classList.add("active")
     welcomeBtn.classList.add("hidden")
 
+
     soundToggle.volume = 0.50;
         soundToggle.play();
 }
 
 
-
+aboutPage.forEach((el) => watcher.observe(el));
 boxScrolled.forEach((el) => watcher.observe(el));
-aboutScrolled.forEach((el) => watcher.observe(el));
+
 contactScrolled.forEach((el) => watcher.observe(el));
 
 // navbar

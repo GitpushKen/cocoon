@@ -28,18 +28,22 @@ body {
     height: 100svh;
     width: 100svw;
     color: #776B5D;
-    overflow-y: hidden;
+  overflow: hidden;
+  user-select: none;
 }
+
 
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
+
+// Nav bar
 
 .nav-bar {
     position: fixed;
     align-self: center;
-    width: 90svw;
+    width: 100svw;
     bottom: 0px;
     display: flex;
     align-items: center;
@@ -48,6 +52,8 @@ body {
     transition: opacity 1s;
     opacity: 0;
     z-index: 100;
+
+    backdrop-filter: blur(10px);
 
     &.active {
       opacity: 1;
@@ -60,7 +66,7 @@ body {
               position: absolute;
               margin-left: 50px;
               height:3px;
-              width: calc(100% - 50px);
+              width: calc(98% - 50px);
               background-color: #B0A695;
               opacity: 50%;
 
@@ -109,7 +115,7 @@ a.active::before {
 
 
 ul {
-  width: 100%;
+  width: 98%;
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -117,14 +123,23 @@ ul {
 
 }
 
-.main-container {
-    height: 100svh;
-    font-family: "DMSans Bold";
-    scroll-behavior: smooth;
 
+// Main content
+
+.x-scroller {
+
+  width: 100%;
+  height: 100%;
+  font-family: "DMSans Bold";
 
 }
 
+.main-container {
+  position: absolute;
+  width: 100svw;
+  height: 100svh;
+
+}
 
 // Welcome screen
 
@@ -138,7 +153,6 @@ ul {
     align-items: center;
     font-family: "Infinite";
     flex-direction: column;
-    scroll-snap-align: center;
     rotate: 90deg;
 
 
@@ -223,18 +237,99 @@ ul {
 }
 
 
+.sub-cont1 {
+  width: 100%;
+  height: 100%;
+}
+
+.sub-cont2 {
+  transform: translateY(50%);
+  width: 100%;
+  height: 100%;
+}
+
 .about {
     display: flex;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    font-family: "Infinite";
     flex-direction: column;
-    scroll-snap-align: center;
+    height: 100svh;
+    width: 100svw;
+    padding-left: 12px;
+    padding-top: 12px;
+    font-family: "Infinite";
+    gap: 80px;
+    opacity: 0;
+    transition: ease-out 0.8s;
+
+
+    .gradient-1 {
+      position: absolute;
+      width: 80%;
+      height: 90%;
+      transform: translate(1.5%, 2.3%);
+      background-color: #ebe3d5;
+      background-image: linear-gradient(90deg, #ebe3d5 0%, #f2eeea 100%);
+          
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+
+          h1 {
+            position: absolute;
+            padding: 20px 0 0 40px;
+            font-size: 10rem;
+            z-index: 10;
+          }
+      
+          .texts {
+            position: absolute;
+            top: 280px;
+            display: flex;
+            margin-left: 400px; 
+            color: #ebe3d5;
+            padding: 40px;
+            flex-direction: row;
+            width: 50%;
+            height: 60%;
+            gap: 100px;
+            z-index: 10;
+      
+            p {
+              width: 30%;
+            }
+          }
+      
+          .pic {
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            object-fit: contain;
+            z-index: 100;
+            height: 100%;
+            width: auto;
+            z-index: -1;
+
+            img {
+              height: 100%;
+            }
+
+      
+          }
+    }
+    
+    
     
 }
 
+
+
+
+.visible {
+  opacity: 100%;
+}
 // Grid
 
 
@@ -244,7 +339,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100svh;
+    height: 100%;
     width: 100svw;
     z-index: 50;
     padding-bottom: 100px;
