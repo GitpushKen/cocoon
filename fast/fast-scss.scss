@@ -511,6 +511,7 @@
     align-self: center;
     width: 100svw;
     bottom: 0px;
+    left: 0;
     display: flex;
     align-items: center;
     justify-self: center;
@@ -601,9 +602,12 @@ ul {
 }
 
 .main-container {
-  position: absolute;
   width: 100svw;
-  height: 100svh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+
 
 }
 
@@ -711,12 +715,14 @@ ul {
 .sub-cont1 {
   width: 100%;
   height: 100%;
+  transform: translateX(50%);
 }
 
 .sub-cont2 {
 
-  width: 100%;
-  height: 100%;
+  width: 100svw;
+  height: 100svh;
+  transform: translateX(100%);
 }
 
 .about {
@@ -727,7 +733,6 @@ ul {
     padding-left: 12px;
     padding-top: 12px;
     font-family: "Infinite";
-    gap: 80px;
     transform: translateX(300px);
     opacity: 0;
 
@@ -767,14 +772,15 @@ ul {
             left: 70px;
             display: flex;
             flex-direction: column;
-            height: 70vh;
+            height: 60%;
             color: #776B5D;
             width: 13%;
             border-left: solid 3px #776b5dc4;
             font-size: 1.2vh;
+            margin: 0;
 
             ul {
-              padding: 0 0 30px 20px;
+              padding: 0 0 10px 20px;
               margin: 0;
               display: flex;
               flex-direction: column;
@@ -790,13 +796,13 @@ ul {
             }
 
             #dl {
-              padding-top: 30px;
+              padding-top: 10px;
             }
 
             .ID {
               display: flex;
               flex-direction: column;
-              height: 250px;
+              height: 210px;
             }
             .OS {
               display: flex;
@@ -872,10 +878,11 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 100svh;
     width: 100svw;
     z-index: 50;
     padding-bottom: 100px;
+    transform: translateX(50%);
   }
 
   .box {

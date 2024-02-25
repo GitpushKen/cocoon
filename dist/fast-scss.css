@@ -455,6 +455,7 @@ a, a:visited, a:active {
     align-self: center;
     width: 100svw;
     bottom: 0px;
+    left: 0;
     display: flex;
     align-items: center;
     justify-self: center;
@@ -521,9 +522,11 @@ a, a:visited, a:active {
     font-family: "DMSans Bold";
   }
   .main-container {
-    position: absolute;
     width: 100svw;
-    height: 100svh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
   }
   .welcome-screen {
     display: flex;
@@ -596,10 +599,12 @@ a, a:visited, a:active {
   .sub-cont1 {
     width: 100%;
     height: 100%;
+    transform: translateX(50%);
   }
   .sub-cont2 {
-    width: 100%;
-    height: 100%;
+    width: 100svw;
+    height: 100svh;
+    transform: translateX(100%);
   }
   .about {
     display: flex;
@@ -609,7 +614,6 @@ a, a:visited, a:active {
     padding-left: 12px;
     padding-top: 12px;
     font-family: "Infinite";
-    gap: 80px;
     transform: translateX(300px);
     opacity: 0;
     transition: ease-out 1s;
@@ -643,14 +647,15 @@ a, a:visited, a:active {
     left: 70px;
     display: flex;
     flex-direction: column;
-    height: 70vh;
+    height: 60%;
     color: #776B5D;
     width: 13%;
     border-left: solid 3px rgba(119, 107, 93, 0.768627451);
     font-size: 1.2vh;
+    margin: 0;
   }
   .about .container .id ul {
-    padding: 0 0 30px 20px;
+    padding: 0 0 10px 20px;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -663,12 +668,12 @@ a, a:visited, a:active {
     border-left: solid 3px rgba(119, 107, 93, 0.431372549);
   }
   .about .container .id #dl {
-    padding-top: 30px;
+    padding-top: 10px;
   }
   .about .container .id .ID {
     display: flex;
     flex-direction: column;
-    height: 250px;
+    height: 210px;
   }
   .about .container .id .OS {
     display: flex;
@@ -725,10 +730,11 @@ a, a:visited, a:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 100svh;
     width: 100svw;
     z-index: 50;
     padding-bottom: 100px;
+    transform: translateX(50%);
   }
   .box {
     width: 100%;
