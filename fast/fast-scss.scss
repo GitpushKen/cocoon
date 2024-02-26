@@ -766,17 +766,20 @@ ul {
           .title h1 {
             position: absolute;
             padding: 20px 0 0 40px;
-            font-size: 10rem;
+            font-size: 15vh;
             z-index: 10;
+            margin: 0;
           }
       
           .id {
             position: absolute;
-            top: 230px;
+            top: 180px;
             left: 70px;
             display: flex;
             flex-direction: column;
-            height: 60%;
+            justify-content: flex-start;
+            gap: 13%;
+            height: 65%;
             color: #776B5D;
             width: 13%;
             border-left: solid 3px #776b5dc4;
@@ -806,7 +809,7 @@ ul {
             .ID {
               display: flex;
               flex-direction: column;
-              height: 210px;
+              height: 20%;
             }
             .OS {
               display: flex;
@@ -822,7 +825,7 @@ ul {
             transform: translate(-50%, -50%);
             display: flex;
             text-align: justify;
-            font-size: 1.3vh;
+            font-size: 1.8vh;
             color: #776B5D;
             overflow-y: scroll;
             flex-direction: row;

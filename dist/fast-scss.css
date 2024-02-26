@@ -643,16 +643,19 @@ a, a:visited, a:active {
   .about .container .title h1 {
     position: absolute;
     padding: 20px 0 0 40px;
-    font-size: 10rem;
+    font-size: 15vh;
     z-index: 10;
+    margin: 0;
   }
   .about .container .id {
     position: absolute;
-    top: 230px;
+    top: 180px;
     left: 70px;
     display: flex;
     flex-direction: column;
-    height: 60%;
+    justify-content: flex-start;
+    gap: 13%;
+    height: 65%;
     color: #776B5D;
     width: 13%;
     border-left: solid 3px rgba(119, 107, 93, 0.768627451);
@@ -678,7 +681,7 @@ a, a:visited, a:active {
   .about .container .id .ID {
     display: flex;
     flex-direction: column;
-    height: 210px;
+    height: 20%;
   }
   .about .container .id .OS {
     display: flex;
@@ -692,7 +695,7 @@ a, a:visited, a:active {
     transform: translate(-50%, -50%);
     display: flex;
     text-align: justify;
-    font-size: 1.3vh;
+    font-size: 1.8vh;
     color: #776B5D;
     overflow-y: scroll;
     flex-direction: row;
