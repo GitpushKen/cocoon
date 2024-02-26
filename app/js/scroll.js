@@ -95,7 +95,7 @@ function toggleAbout() {
 
 nav2Scrolled.addEventListener("click", toggleAbout)
 
-let soundToggle = new Audio("../../assets/sounds/switch.wav")
+let soundToggle = new Audio("../../../assets/sounds/switch.wav")
 
 ////
 
