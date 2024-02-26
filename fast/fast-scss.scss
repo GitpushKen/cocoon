@@ -533,7 +533,7 @@
               position: absolute;
               margin-left: 50px;
               height:3px;
-              width: calc(98% - 50px);
+              width: calc(97% - 50px);
               background-color: #B0A695;
               opacity: 50%;
 
@@ -581,8 +581,8 @@ a.active::before {
 }
 
 
-ul {
-  width: 98%;
+.nav-bar ul {
+  width: 97%;
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -780,11 +780,10 @@ ul {
             flex-direction: column;
             justify-content: flex-start;
             gap: 13%;
-            height: 65%;
+            height: 60%;
             color: #776B5D;
             width: 13%;
-            border-left: solid 3px #776b5dc4;
-            font-size: 1.2vh;
+            font-size: 1.4vh;
             margin: 0;
 
             ul {
@@ -792,6 +791,7 @@ ul {
               margin: 0;
               display: flex;
               flex-direction: column;
+              list-style: none;
             }
 
             li {
@@ -799,9 +799,6 @@ ul {
               border-left: solid 3px #776b5d6e;
             }
 
-            #tb {
-              border-left: solid 3px #776b5d6e;
-            }
 
             #dl {
               padding-top: 10px;
@@ -810,12 +807,13 @@ ul {
             .ID {
               display: flex;
               flex-direction: column;
-              height: 20%;
+              height: 25%;
             }
             .OS {
               display: flex;
               flex-direction: column;
-              height: 60%;
+              height: 30%;
+              padding-top: 10px;
             }
           }
 
@@ -887,7 +885,7 @@ ul {
     align-items: center;
     justify-content: center;
     height: 100svh;
-    width: 100svw;
+
     z-index: 50;
     padding-bottom: 100px;
   }
