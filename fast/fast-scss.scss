@@ -820,7 +820,7 @@ a.active::before {
           .texts {
             position: absolute;
             top: 50%;
-            left: 48%;
+            left: 50%;
             transform: translate(-50%, -50%);
             display: flex;
             text-align: justify;
@@ -852,10 +852,10 @@ a.active::before {
             display: flex;
             position: absolute;
             bottom: 0;
-            right: 0;
+            right: -1%;
             object-fit: contain;
             z-index: 100;
-            height: 60%;
+            height: 70%;
             width: auto;
             z-index: -1;
 
