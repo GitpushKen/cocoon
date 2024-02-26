@@ -645,11 +645,11 @@ a, a:visited, a:active {
     padding: 20px 0 0 40px;
     font-size: 15vh;
     z-index: 10;
-    margin: 0 0 100px 0px;
   }
   .about .container .id {
-    position: absolute;
-    top: 180px;
+    margin-top: 15%;
+    position: relative;
+    top: -20vh;
     left: 70px;
     display: flex;
     flex-direction: column;
