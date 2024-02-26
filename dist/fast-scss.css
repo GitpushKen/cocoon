@@ -495,7 +495,7 @@ a, a:visited, a:active {
   .nav-bar li a {
     color: rgba(255, 0, 0, 0);
   }
-  a::before {
+  .nav-bar a::before {
     content: "";
     position: absolute;
     height: 10px;
@@ -505,7 +505,10 @@ a, a:visited, a:active {
     background-color: #d0c5b3;
     transition: 1.5s;
   }
-  a.active::before {
+  strong {
+    color: #908271;
+  }
+  .nav-bar a.active::before {
     background-color: #776B5D;
     rotate: 630deg;
   }
@@ -753,8 +756,9 @@ a, a:visited, a:active {
     padding: 40px 0 40px 0;
   }
   .about .container .texts .moi img {
-    height: 80%;
-    align-self: center;
+    height: 120%;
+    align-self: flex-end;
+    transform: translateY(40px);
   }
   .about .container .texts .moi p {
     width: 50%;

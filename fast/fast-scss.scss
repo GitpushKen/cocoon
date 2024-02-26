@@ -563,7 +563,7 @@
           }
 }
 
-a::before {
+.nav-bar a::before {
   content: "";
   position: absolute;
   height: 10px;
@@ -575,7 +575,11 @@ a::before {
 
 }
 
-a.active::before {
+strong {
+  color: #908271;
+}
+
+.nav-bar a.active::before {
   background-color: #776B5D;
   rotate: 630deg;
 }
@@ -893,8 +897,9 @@ a.active::before {
               
 
               img {
-                height: 80%;
-                align-self: center;
+                height: 120%;
+                align-self: flex-end;
+                transform: translateY(40px);
               }
 
               p {
