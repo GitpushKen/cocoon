@@ -602,19 +602,18 @@ ul {
 }
 
 .main-container {
+  height: 100svh;
   width: 100svw;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: absolute;
-
-
+  justify-content: center;
+  align-items: center;
 }
 
 // Welcome screen
 
 .welcome-screen {
     display: flex;
+    position: absolute;
     height: 100vh;
     width: 100vw;
     opacity: 100%;
@@ -624,6 +623,7 @@ ul {
     font-family: "Infinite";
     flex-direction: column;
     rotate: 90deg;
+    z-index: 1000;
 
 
     &.hidden {
@@ -713,27 +713,31 @@ ul {
 
 
 .sub-cont1 {
-  width: 100%;
-  height: 100%;
-  transform: translateX(50%);
+  width: 100svw;
+  height: 100svh;
+  opacity: 1;
+  display: none;
 }
 
 .sub-cont2 {
 
   width: 100svw;
+  opacity: 1;
+  display: none;
   height: 100svh;
-  transform: translateX(100%);
+
 }
 
 .about {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 100svh;
     width: 100svw;
     padding-left: 12px;
     padding-top: 12px;
     font-family: "Infinite";
-    transform: translateX(300px);
+    transform: translateX(100px);
     opacity: 0;
 
     transition: ease-out 1s;
@@ -882,7 +886,6 @@ ul {
     width: 100svw;
     z-index: 50;
     padding-bottom: 100px;
-    transform: translateX(50%);
   }
 
   .box {

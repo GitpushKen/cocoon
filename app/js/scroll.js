@@ -26,7 +26,7 @@ btnDown.addEventListener("click", toggleBtn)
 nav2Scrolled.addEventListener("click", toggleAbout)
 
 function toggleAbout() {
-    aboutPage.classList.add("visible")
+    panel2.classList.add("visible")
 }
 
 
@@ -43,7 +43,9 @@ window.onload = (e) => {
 function toggleBtn() {
     nav1Scrolled.classList.add("active")
     navBar.classList.add("active")
-    welcomeBtn.classList.add("hidden")
+    panel1.style.display="block";
+    panel2.style.display="none";
+    welcomeBtn.style.display="none";
 
 
     soundToggle.volume = 0.50;
@@ -59,6 +61,9 @@ contactScrolled.forEach((el) => watcher.observe(el));
 // navbar
 
 const navBtns = document.querySelectorAll(".nav-bar ul li a");
+const panel1 = document.querySelector(".sub-cont1")
+const panel2 = document.querySelector(".sub-cont2")
+const homeBtn = document.getElementById("link1")
 
 
 navBtns.forEach(item => {
@@ -74,6 +79,21 @@ navBtns.forEach(item => {
     });
 });
 
+homeBtn.addEventListener("click", toggleHome)
+
+function toggleHome() {
+    panel1.style.display="block";
+    panel2.style.display="none";
+    welcomeBtn.style.display="none";
+}
+
+function toggleAbout() {
+    panel2.style.display="block";
+    panel1.style.display="none";
+    welcomeBtn.style.display="none";
+}
+
+nav2Scrolled.addEventListener("click", toggleAbout)
 
 let soundToggle = new Audio("../../assets/sounds/switch.wav")
 
