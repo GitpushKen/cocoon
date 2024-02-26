@@ -742,7 +742,6 @@ strong {
     font-family: "Infinite";
     transform: translateX(100px);
     opacity: 0;
-
     transition: ease-out 1s;
 
     &.show {
@@ -785,7 +784,8 @@ strong {
             height: 60%;
             color: #776B5D;
             width: 13%;
-            font-size: 1.4vh;
+            font-size: 0.8rem;
+            line-height: 1.1;
             margin: 0;
 
             ul {
@@ -815,7 +815,7 @@ strong {
               display: flex;
               flex-direction: column;
               height: 30%;
-              padding-top: 10px;
+              padding-top: 30px;
             }
           }
 
@@ -826,7 +826,7 @@ strong {
             transform: translate(-50%, -50%);
             display: flex;
             text-align: justify;
-            font-size: 1.8vh;
+            font-size: 0.9rem;
             color: #776B5D;
             overflow-y: scroll;
             flex-direction: column;
@@ -837,7 +837,7 @@ strong {
             border-image-source: linear-gradient(to bottom, #776B5D, #00000000);
             width: 40%;
             gap: 20px;
-            height: 50%;
+            height: 58%;
             z-index: 10;
             padding: 20px 10px 0 10px;
             backdrop-filter: blur(100px);
@@ -902,8 +902,12 @@ strong {
 
               p {
                 width: 50%;
+                padding-top: 10px;
                 align-self: center;
-                font-size: 1.5vh;
+                font-size: 0.8rem;
+                word-spacing: 0.3rem;
+                text-align: left;
+                line-height: 1.2;
               }
             }
           }
