@@ -827,24 +827,80 @@ a.active::before {
             font-size: 1.8vh;
             color: #776B5D;
             overflow-y: scroll;
-            flex-direction: row;
+            flex-direction: column;
             border: solid 3px;
             border-width: 5px;
             border-image-slice: 1;
             border-bottom: 0;
             border-image-source: linear-gradient(to bottom, #776B5D, #00000000);
             width: 40%;
+            gap: 20px;
             height: 60%;
             z-index: 10;
-            justify-content: center;
-            padding-top: 50px;
-            padding-left: 0;
+            padding: 20px 10px 0 10px;
             backdrop-filter: blur(100px);
             font-family: "Infinite";
 
-      
+            
+            h2 {
+              top: 0;
+              left: 0;
+              width: 100%;
+              font-size: 3.5vh;
+              
+              
+
+            }
+
+            h2::after {
+                content: "";
+                width: 100%;
+                display: block;
+                margin-top: 10px;
+                height: 5px;
+                background-color:#776B5D;
+              
+            }
+
             p {
-              width: 90%;
+              width: 100%;
+            }
+
+            #cocooning, #conscious {
+              font-size: 1.5vh;
+              background-color: #776B5D;
+              font-family: "Infinite 2";
+              border-radius: 10px;
+              padding: 10px;
+              text-align: center;
+              color: #ebe3d5;
+              font-weight: 700;
+
+            }
+
+            .moi {
+              display: flex;
+              flex-direction: row;
+              align-self: center;
+              object-fit: contain;
+              justify-content: space-evenly;
+              height: 60%;
+              width: 80%;
+              border-top: solid 3px #776B5D;
+              border-bottom: solid 3px #776B5D;
+              border-width: 80%;
+              padding: 40px 0 40px 0;
+              
+
+              img {
+                height: 80%;
+                align-self: center;
+              }
+
+              p {
+                width: 50%;
+                align-self: center;
+              }
             }
           }
       
