@@ -147,8 +147,11 @@ a, a:visited, a:active {
     text-align: center;
     color: rgb(233, 233, 233);
     padding-top: 1rem;
-    font-family: "DM Sans";
-    font-size: 2rem;
+    font-family: "DMSans Bold";
+    font-size: 1.7rem;
+  }
+  .nameBar p {
+    transform: translateY(-15px);
   }
   .testDiv {
     display: flex;
@@ -248,15 +251,47 @@ a, a:visited, a:active {
     color: #41493a;
   }
   .main .titled #starter {
-    animation: move 3s ease-in-out infinite;
+    animation: move 1.5s ease-in-out infinite;
     animation-play-state: running;
     align-self: center;
     justify-self: center;
   }
   @keyframes move {
+    0% {
+      opacity: 100%;
+      transform: rotate(0deg);
+    }
+    12% {
+      opacity: 100%;
+      transform: rotate(5deg);
+    }
+    25% {
+      opacity: 100%;
+      transform: rotate(0deg);
+    }
+    37% {
+      opacity: 100%;
+      transform: rotate(-5deg);
+    }
     50% {
       opacity: 100%;
-      transform: translateY(15px);
+      transform: rotate(0deg);
+    }
+    62% {
+      opacity: 100%;
+      transform: rotate(5deg);
+    }
+    75% {
+      opacity: 100%;
+      transform: rotate(0deg);
+    }
+    87% {
+      opacity: 100%;
+      transform: rotate(-5deg);
+    }
+    100% {
+      opacity: 100%;
+      transform: rotate(0deg);
     }
   }
   .main .titled.active {
