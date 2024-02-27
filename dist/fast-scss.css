@@ -609,9 +609,15 @@ a, a:visited, a:active {
   }
   .sub-cont2 {
     width: 100svw;
+    height: 100svh;
     opacity: 1;
     display: none;
+  }
+  .sub-cont3 {
+    width: 100svw;
     height: 100svh;
+    opacity: 1;
+    display: none;
   }
   .about {
     display: flex;
@@ -804,6 +810,185 @@ a, a:visited, a:active {
   }
   .about .container .pic img {
     height: 100%;
+  }
+  .contact-me {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100svh;
+    width: 100svw;
+    font-family: "Infinite";
+    transform: translateX(100px);
+    opacity: 0;
+    padding-top: 12px;
+    transition: ease-out 1s;
+  }
+  .contact-me.show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .contact-me .gradient-1 {
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    top: 2.3%;
+    background-color: #ebe3d5;
+    background-image: linear-gradient(90deg, #ebe3d5 0%, #f2eeea 100%);
+    z-index: -1;
+  }
+  .contact-me .container {
+    display: flex;
+  }
+  .contact-me .container .title h1 {
+    position: absolute;
+    padding: 20px 0 0 40px;
+    font-size: 15vh;
+    z-index: 10;
+  }
+  .contact-me .container .group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 100px;
+    width: 35%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-me .container .group .enveloppe {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-me .container .group .enveloppe .feuille {
+    position: absolute;
+    height: 400px;
+    width: 450px;
+    background-color: #776B5D;
+    border: solid 3px;
+    border-width: 3px;
+    border-image-slice: 1;
+    border-bottom: 0;
+    border-image-source: linear-gradient(to bottom, rgba(96, 86, 75, 0.8392156863), rgba(0, 0, 0, 0));
+    display: flex;
+    z-index: 0;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    flex-direction: column;
+    font-family: "Infinite 2";
+  }
+}
+@media screen and (orientation: landscape) and (max-height: 1000px) {
+  .contact-me .container .group .enveloppe .feuille {
+    width: 400px;
+    height: 300px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .contact-me .container .group .enveloppe .feuille h2 {
+    padding: 16px 15px;
+    font-size: 12px;
+    color: #f2eeea;
+  }
+  .contact-me .container .group .enveloppe .feuille h3 {
+    padding-left: 25px;
+    padding-top: 2px;
+    font-size: 10px;
+  }
+  .contact-me .container .group .enveloppe .feuille h2, .contact-me .container .group .enveloppe .feuille h3 {
+    opacity: 0.8;
+    color: #f2eeea;
+  }
+  .contact-me .container .group .enveloppe .front {
+    -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+    background-color: #f2eeea;
+    border: solid 3px;
+    border-width: 5px;
+    border-image-slice: 1;
+    border-top: 0;
+    border-image-source: linear-gradient(to top, #776B5D, rgba(0, 0, 0, 0));
+    position: absolute;
+    height: 450px;
+    width: 600px;
+    display: flex;
+    z-index: 1;
+    transition: ease-in-out 0.3s;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (orientation: landscape) and (max-height: 1000px) {
+  .contact-me .container .group .enveloppe .front {
+    width: 500px;
+    height: 350px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .contact-me .container .group .enveloppe .icons {
+    display: flex;
+    height: 30%;
+    width: 30%;
+  }
+  .contact-me .container .group .enveloppe #icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 200px;
+    display: flex;
+    -o-object-fit: cover;
+    object-fit: cover;
+    opacity: 100%;
+    transition: ease-in-out 0.3s;
+    z-index: 2;
+  }
+  .contact-me .container .group .enveloppe #icon2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 200px;
+    display: flex;
+    -o-object-fit: cover;
+    object-fit: cover;
+    opacity: 0%;
+    transition: ease-in-out 0.3s;
+    z-index: 20;
+  }
+  .contact-me .container .enveloppe:hover .front {
+    box-shadow: 0px -18px 15px -18px rgba(58, 51, 40, 0.509);
+  }
+  .contact-me .container .enveloppe:hover .feuille {
+    transform: translateY(-115px);
+    opacity: 75%;
+  }
+  .contact-me .container .enveloppe:hover #icon {
+    opacity: 100%;
+  }
+  .contact-me .container .enveloppe:hover #icon2 {
+    opacity: 100%;
+  }
+  .contact-me .container .enveloppe:hover .form {
+    opacity: 1;
+  }
+  .contact-me .container .blank {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: -1%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    z-index: 100;
+    height: 70%;
+    width: 390px;
+    z-index: -1;
   }
   .grid-menu {
     justify-self: center;

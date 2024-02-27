@@ -1,14 +1,37 @@
 
 const boxScrolled = document.querySelectorAll(".box");
-const contactScrolled = document.querySelectorAll(".box");
-const btnDown = document.getElementById("enter")
-const nav2Scrolled = document.getElementById('link2')
-const nav1Scrolled = document.getElementById("link1")   
-const navBar = document.querySelector(".nav-bar")
+
 const welcomeBtn = document.querySelector(".welcome-screen")
+const btnDown = document.getElementById("enter")
+const homeBtn = document.getElementById("link1")
+
+const navBar = document.querySelector(".nav-bar")
+
+const navBtns = document.querySelectorAll(".nav-bar ul li a");
+const nav1Scrolled = document.getElementById("link1") 
+const nav2Scrolled = document.getElementById('link2')
+const nav3Scrolled = document.getElementById('link3')
+  
 const aboutPage = document.querySelectorAll(".about")
+const contactPage = document.querySelectorAll(".contact-me")
+
+const panel1 = document.querySelector(".sub-cont1")
+const panel2 = document.querySelector(".sub-cont2")
+const panel3 = document.querySelector(".sub-cont3")
 
 
+
+let navOn = true; 
+
+window.onload = (e) => {
+    
+    if (navOn) {
+        nav1Scrolled.classList.add("active")
+    }
+
+}
+
+//// Intersection Obs
 
 const watcher = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -22,49 +45,29 @@ const watcher = new IntersectionObserver((entries) => {
 });
 
 
+aboutPage.forEach((el) => watcher.observe(el));
+boxScrolled.forEach((el) => watcher.observe(el));
+contactPage.forEach((el) => watcher.observe(el));
+
+
+//// Toggle btn
+
 btnDown.addEventListener("click", toggleBtn)
-nav2Scrolled.addEventListener("click", toggleAbout)
-
-function toggleAbout() {
-    panel2.classList.add("visible")
-}
-
-
-let navOn = true; 
-
-window.onload = (e) => {
-    
-    if (navOn) {
-        nav1Scrolled.classList.add("active")
-    }
-
-}
+homeBtn.addEventListener("click", toggleHome)
 
 function toggleBtn() {
     nav1Scrolled.classList.add("active")
     navBar.classList.add("active")
     panel1.style.display="block";
     panel2.style.display="none";
+    panel3.style.display="none";
     welcomeBtn.style.display="none";
-
-
     soundToggle.volume = 0.50;
         soundToggle.play();
 }
 
 
-aboutPage.forEach((el) => watcher.observe(el));
-boxScrolled.forEach((el) => watcher.observe(el));
-
-contactScrolled.forEach((el) => watcher.observe(el));
-
-// navbar
-
-const navBtns = document.querySelectorAll(".nav-bar ul li a");
-const panel1 = document.querySelector(".sub-cont1")
-const panel2 = document.querySelector(".sub-cont2")
-const homeBtn = document.getElementById("link1")
-
+//// navbar
 
 navBtns.forEach(item => {
     item.addEventListener("click", function (m) {
@@ -79,39 +82,83 @@ navBtns.forEach(item => {
     });
 });
 
-homeBtn.addEventListener("click", toggleHome)
-
 function toggleHome() {
     panel1.style.display="block";
     panel2.style.display="none";
+    panel3.style.display="none";
     welcomeBtn.style.display="none";
 }
 
 function toggleAbout() {
+    panel2.classList.add("visible")
     panel2.style.display="block";
+    panel1.style.display="none";
+    panel3.style.display="none";
+    panel3.classList.remove("visible")
+    welcomeBtn.style.display="none";
+}
+
+function toggleContact() {
+    panel3.classList.add("visible")
+    panel2.classList.remove("visible")
+    panel3.style.display="block";
+    panel2.style.display="none";
     panel1.style.display="none";
     welcomeBtn.style.display="none";
 }
 
 nav2Scrolled.addEventListener("click", toggleAbout)
+nav2Scrolled.addEventListener("click", toggleAbout)
+nav3Scrolled.addEventListener("click", toggleContact)
+
 
 let soundToggle = new Audio("../../../assets/sounds/switch.wav")
 
-////
+
+  //// Music
 
 
-//////
+  const play = document.getElementById("lofi");
+  let audio = new Audio("../../assets/sounds/Lofi-sample.mp3")
+  let music = false; 
+  
+  document.getElementById('lofi').innerHTML =
+      "Lofi : Off";
+  
+  function playMusic() {
+      if (!music) {;
+      audio.play()
+      audio.volume = 0.25;
+      music = true;
+      console.log(music)
+      play.classList.toggle("active")
+      document.getElementById('lofi').innerHTML =
+      "Lofi : On";
+  
+      } else { 
+          audio.pause()
+          music = false;
+          play.classList.remove("active")
+          document.getElementById('lofi').innerHTML =
+      "Lofi : Off";
+  
+      }
+  }
+  
+  
+  
 
 
+////// Mobile
+
+//// Booting
 
 let bootAudio = new Audio("../../assets/sounds/bootup.mp3")
 let bootUp = document.getElementById("bootUp")
 let miniMe = document.querySelector(".miniMe")
 let titled = document.querySelector(".titled")
 
-
 let bootEnd = false;
-
 
 window.onload = (e) => {
     
@@ -128,7 +175,6 @@ function boot() {
     console.log(bootEnd)
 }
 
-
 setTimeout(function(){bootUp.classList.toggle("inactive")},2000);
 
 function started() {
@@ -137,8 +183,7 @@ function started() {
     console.log(bootEnd);
 }
 
-
-// Menu principal
+//// Menu principal
 
 clickSound = new Audio("../assets/sounds/click.mp3")
 
@@ -198,8 +243,6 @@ what.addEventListener("click", toggleWhat);
 how.addEventListener("click", toggleHow);
 
 
-
-
 function toggleWho() {
     clickSound.play();
     clickSound.volume = 0.20;
@@ -228,8 +271,6 @@ function toggleWho() {
     what.classList.remove("active");
 }
 
-
-
 function toggleWhat() {
 
     clickSound.play();
@@ -255,18 +296,17 @@ function toggleWhat() {
     who.classList.remove("active");
     how.classList.remove("active");
 }
+
 function toggleHow() {
     clickSound.play();
     clickSound.volume = 0.20;
     how.classList.toggle("active");
     howOn = true;
-
     who.classList.remove("active");
     what.classList.remove("active");
 }
 
-// barre d'état
-
+//// barre d'état
 
 function startTime() {
     let today = new Date();
@@ -282,35 +322,13 @@ function startTime() {
   };
 
 
+//// Mail 
 
-  // 
-  
+const iconMail = document.querySelector(".icons")
 
-const play = document.getElementById("lofi");
-let audio = new Audio("../../assets/sounds/Lofi-sample.mp3")
-let music = false; 
+iconMail.addEventListener('click', sendMail)
 
-document.getElementById('lofi').innerHTML =
-    "Lofi : Off";
-
-function playMusic() {
-    if (!music) {;
-    audio.play()
-    audio.volume = 0.25;
-    music = true;
-    console.log(music)
-    play.classList.toggle("active")
-    document.getElementById('lofi').innerHTML =
-    "Lofi : On";
-
-    } else { 
-        audio.pause()
-        music = false;
-        play.classList.remove("active")
-        document.getElementById('lofi').innerHTML =
-    "Lofi : Off";
-
-    }
+function sendMail(){
+    window.location.href = "mailto:kenperot@outlook.fr?subject=En%20savoir%20plus&body=";
+    console.log("work")
 }
-
-
