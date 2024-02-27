@@ -784,9 +784,13 @@ strong {
             height: 60%;
             color: #776B5D;
             width: 13%;
-            font-size: 0.8rem;
+            font-size: 1rem;
             line-height: 1.1;
             margin: 0;
+
+            @media screen and (max-height: 1000px) {
+              font-size: 0.8rem;
+            }
 
             ul {
               padding: 0 0 10px 20px;
@@ -826,7 +830,7 @@ strong {
             transform: translate(-50%, -50%);
             display: flex;
             text-align: justify;
-            font-size: 0.9rem;
+            font-size: 1.4rem;
             color: #776B5D;
             overflow-y: scroll;
             flex-direction: column;
@@ -837,11 +841,15 @@ strong {
             border-image-source: linear-gradient(to bottom, #776B5D, #00000000);
             width: 40%;
             gap: 20px;
-            height: 58%;
+            height: 51%;
             z-index: 10;
             padding: 20px 10px 0 10px;
             backdrop-filter: blur(100px);
             font-family: "Infinite";
+            @media screen and (max-height: 1000px) {
+              font-size: 0.9rem;
+              height: 50%;
+            }
 
             
             h2 {
@@ -904,10 +912,14 @@ strong {
                 width: 50%;
                 padding-top: 10px;
                 align-self: center;
-                font-size: 0.8rem;
+                font-size: 1.1rem;
                 word-spacing: 0.3rem;
                 text-align: left;
                 line-height: 1.2;
+
+                @media screen and (max-height: 1000px) {
+                  font-size: 0.8rem;
+                }
               }
             }
           }
