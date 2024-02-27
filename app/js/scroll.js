@@ -267,8 +267,13 @@ function toggleWho() {
         console.log("who",whoOn);
     }
 
+    if (howOn) {
+        iconMail2.classList.remove("active");
+    }
+
     how.classList.remove("active");
     what.classList.remove("active");
+    panelPro.classList.remove("active")
 }
 
 function toggleWhat() {
@@ -277,14 +282,20 @@ function toggleWhat() {
     clickSound.volume = 0.20;
     if (!whatOn) {
         what.classList.toggle("active");
+        panelPro.classList.toggle("active")
         how.classList.toggle("down2");
         whatOn = true;
         console.log("what", whatOn);
     } else {
         how.classList.remove("down2");
         what.classList.remove("active");
+        panelPro.classList.remove("active")
         whatOn = false;
         console.log("what", whatOn); 
+    }
+
+    if (howOn) {
+        iconMail2.classList.remove("active");
     }
     
     /*if (whoOn) {
@@ -301,9 +312,11 @@ function toggleHow() {
     clickSound.play();
     clickSound.volume = 0.20;
     how.classList.toggle("active");
+    iconMail2.classList.toggle("active");
     howOn = true;
     who.classList.remove("active");
     what.classList.remove("active");
+
 }
 
 //// barre d'état
@@ -332,3 +345,11 @@ function sendMail(){
     window.location.href = "mailto:kenperot@outlook.fr?subject=En%20savoir%20plus&body=";
     console.log("work")
 }
+
+
+
+
+const iconMail2 = document.querySelector(".contact")
+const panelPro = document.querySelector(".panelProject")
+
+iconMail2.addEventListener('click', sendMail)

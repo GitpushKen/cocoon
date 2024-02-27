@@ -85,12 +85,14 @@ a, a:visited, a:active {
   }
   #bootUp {
     display: flex;
-    height: 100%;
-    width: 100%;
+    height: 120svh;
+    width: 83svw;
     z-index: 60;
     opacity: 100;
     transition-delay: 3s;
     padding-top: 40px;
+    padding-bottom: 40px;
+    border: none;
   }
   #bootUp.inactive {
     transition: opacity;
@@ -118,6 +120,7 @@ a, a:visited, a:active {
     align-items: end;
     padding-bottom: 40px;
     overflow-y: hidden;
+    z-index: 1;
   }
   .blackBG .greenScreen {
     width: 87svw;
@@ -130,7 +133,7 @@ a, a:visited, a:active {
     height: 40px;
     width: 100%;
     background-color: rgb(8, 8, 8);
-    z-index: 70;
+    z-index: 170;
     position: absolute;
     top: 0;
   }
@@ -216,7 +219,7 @@ a, a:visited, a:active {
 
   */
   .main {
-    height: 100%;
+    height: 100svh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -239,9 +242,22 @@ a, a:visited, a:active {
     width: 100%;
     justify-content: center;
     align-items: center;
+    font-size: 2rem;
     flex-direction: column;
     font-family: "Pixelify Sans", sans-serif;
     color: #41493a;
+  }
+  .main .titled #starter {
+    animation: move 3s ease-in-out infinite;
+    animation-play-state: running;
+    align-self: center;
+    justify-self: center;
+  }
+  @keyframes move {
+    50% {
+      opacity: 100%;
+      transform: translateY(15px);
+    }
   }
   .main .titled.active {
     display: flex;
@@ -361,7 +377,7 @@ a, a:visited, a:active {
     align-items: center;
   }
   .mainMenu .list .presScroller .scroller .intro {
-    padding: 0;
+    padding: 15px 0 0 0;
     width: 95%;
     height: 97%;
     align-items: baseline;
@@ -371,15 +387,41 @@ a, a:visited, a:active {
     scroll-snap-align: center;
   }
   .mainMenu .list .presScroller .scroller .moi {
-    padding: 0;
+    padding: 15px 0 0 0;
     width: 95%;
-    height: 150%;
+    height: 100%;
+    align-items: baseline;
+    flex-direction: column;
+    border: none;
+    scroll-snap-align: start;
+    box-shadow: none;
+  }
+  .mainMenu .list .presScroller .scroller .search {
+    padding: 15px 0 0 0;
+    width: 95%;
+    height: 200%;
     align-items: baseline;
     flex-direction: column;
     border: none;
     scroll-snap-align: start;
   }
+  .mainMenu .list .presScroller .scroller .final {
+    width: 100%;
+    height: 200%;
+    align-items: baseline;
+    flex-direction: column;
+    border: none;
+    scroll-snap-align: start;
+    margin-top: 30px;
+    background-color: #3f5137;
+    color: #677956;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    padding: 0;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.1);
+  }
   .mainMenu .list .presScroller .scroller #cocoon {
+    margin-top: 15px;
     background-color: #3f5137;
     color: #677956;
     padding: 20px;
@@ -387,10 +429,63 @@ a, a:visited, a:active {
     font-size: 1.25rem;
     box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.1);
   }
+  .mainMenu .list .presScroller .scroller #cocoon2 {
+    background-color: #3f5137;
+    color: #677956;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.25rem;
+  }
+  .mainMenu .list .presScroller .scroller #disclaimer {
+    background-color: #677956;
+    color: #3f5137;
+    padding: 20px;
+    align-self: center;
+    border-radius: 5px;
+    width: 95%;
+    font-size: 1.25rem;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.1);
+  }
   .mainMenu .list .presScroller .scroller img {
     height: 200px;
     padding: 30px 0 40px 0;
     align-self: center;
+  }
+  .mainMenu .list .contact {
+    display: flex;
+    opacity: 0;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    height: 30%;
+    margin-top: 70px;
+    justify-content: center;
+    padding: 0;
+  }
+  .mainMenu .list .contact img {
+    width: 300px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .mainMenu .list .panelProject {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    border: none;
+    box-shadow: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+  }
+  .mainMenu .list .panelProject.active {
+    display: flex;
+    opacity: 1;
   }
   .mainMenu .list #how, .mainMenu .list #what, .mainMenu .list #who {
     z-index: 10;
@@ -408,6 +503,10 @@ a, a:visited, a:active {
     transform: translateY(100svh);
     transition: 0.7s;
     z-index: 10;
+  }
+  .mainMenu .list .contact.active {
+    opacity: 1;
+    z-index: 1000;
   }
   .mainMenu .list div {
     height: 15%;
