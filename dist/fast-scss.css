@@ -928,7 +928,6 @@ a, a:visited, a:active {
   .about .container .texts .moi img {
     height: 120%;
     align-self: flex-end;
-    transform: translateY(40px);
   }
   .about .container .texts .moi p {
     width: 50%;
