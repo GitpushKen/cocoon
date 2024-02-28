@@ -118,7 +118,7 @@ let soundToggle = new Audio("../../../assets/sounds/switch.wav")
 
 
   const played = document.getElementById("lofi");
-  let audio = new Audio("../../../assets/sounds/Lofi-sample.mp3")
+  let audio = new Audio("../../assets/sounds/Lofi-sample.mp3")
   let music = false; 
   
   document.getElementById('lofi').innerHTML =
