@@ -345,6 +345,7 @@ a, a:visited, a:active {
     width: 100%;
     font-family: "Pixelify Sans", sans-serif;
     color: #3f5137;
+    margin-top: 30px;
   }
   .mainMenu .stateBar {
     width: 100%;
@@ -352,7 +353,8 @@ a, a:visited, a:active {
     display: flex;
     flex-direction: row;
     margin: 0;
-    padding: 0;
+    padding: 0 10px 0 10px;
+    z-index: 1000;
   }
   .mainMenu .stateBar #time {
     width: 50%;

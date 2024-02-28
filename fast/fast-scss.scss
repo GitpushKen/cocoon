@@ -374,6 +374,7 @@
       width: 100%;
       font-family: "Pixelify Sans", sans-serif;
       color:#3f5137;
+      margin-top: 30px;
   
   
       .stateBar {
@@ -382,7 +383,8 @@
           display: flex;
           flex-direction: row;
           margin: 0;
-          padding: 0;
+          padding: 0 10px 0 10px;
+          z-index: 1000;
   
           #time {
               width: 50%;
@@ -400,7 +402,7 @@
               justify-content: right;
               text-align: right;
               padding-right: 7px;
-  
+
           }
   
       }
@@ -482,12 +484,12 @@
                   }
                   .search {
                     padding: 50% 0 0 0;
-                  width: 95%;
-                  height: 250%; // Mettre une plus grande taille permet d'éviter le problème du scroll qui rebondit
-                  align-items: baseline;
-                  flex-direction: column;
-                  border: none;
-                  scroll-snap-align: start;
+                    width: 95%;
+                    height: 250%; // Mettre une plus grande taille permet d'éviter le problème du scroll qui rebondit
+                    align-items: baseline;
+                    flex-direction: column;
+                    border: none;
+                    scroll-snap-align: start;
                   }
                   .final {
                   width: 100%;
