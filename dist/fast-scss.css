@@ -80,6 +80,12 @@ a, a:visited, a:active {
        -moz-user-select: none;
             user-select: none;
   }
+  a {
+    text-decoration: none;
+    color: #41493a;
+    font-weight: 900;
+    font-family: "Infinite";
+  }
   .mobile {
     width: 100svw;
     height: 100svh;
@@ -406,7 +412,7 @@ a, a:visited, a:active {
     gap: 120px;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    font-family: "DM Sans", sans-serif;
+    font-family: "DMSans", sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     display: flex;
