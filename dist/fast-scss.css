@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -151,7 +152,7 @@ a, a:visited, a:active {
     font-size: 1.7rem;
   }
   .nameBar p {
-    transform: translateY(-15px);
+    transform: translateY(-8px);
   }
   .testDiv {
     display: flex;
