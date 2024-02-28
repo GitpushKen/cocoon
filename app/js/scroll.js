@@ -124,6 +124,8 @@ let soundToggle = new Audio("../../../assets/sounds/switch.wav")
   document.getElementById('lofi').innerHTML =
       "Lofi : Off";
   
+    played.addEventListener("click", playMusic)
+
   function playMusic() {
       if (!music) {;
       audio.play()
@@ -132,14 +134,14 @@ let soundToggle = new Audio("../../../assets/sounds/switch.wav")
       console.log(music)
       played.classList.toggle("active")
       document.getElementById('lofi').innerHTML =
-      "Lofi : On";
+      "Music : On";
   
       } else { 
           audio.pause()
           music = false;
           played.classList.remove("active")
           document.getElementById('lofi').innerHTML =
-      "Lofi : Off";
+      "Music : Off";
   
       }
   }
