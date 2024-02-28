@@ -35,7 +35,6 @@ window.onload = (e) => {
 
 const watcher = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        
         if (entry.isIntersecting) {
             setTimeout(function(){entry.target.classList.add("show")},200);
     } else {
@@ -119,7 +118,7 @@ let soundToggle = new Audio("../../../assets/sounds/switch.wav")
 
 
   const played = document.getElementById("lofi");
-  let audio = new Audio("../assets/sounds/Lofi-sample.mp3")
+  let audio = new Audio("../../../assets/sounds/Lofi-sample.mp3")
   let music = false; 
   
   document.getElementById('lofi').innerHTML =
@@ -153,7 +152,7 @@ let soundToggle = new Audio("../../../assets/sounds/switch.wav")
 
 //// Booting
 
-let bootAudio = new Audio("../../assets/sounds/bootup.mp3")
+let bootAudio = new Audio("../../../assets/sounds/bootup.mp3")
 let bootUp = document.getElementById("bootUp")
 let miniMe = document.querySelector(".miniMe")
 let titled = document.querySelector(".titled")
@@ -185,7 +184,7 @@ function started() {
 
 //// Menu principal
 
-clickSound = new Audio("../assets/sounds/click.mp3")
+clickSound = new Audio("../../../assets/sounds/click.mp3")
 
 let startBtn = document.getElementById("starter")
 let titleScreen = document.querySelector(".main")
