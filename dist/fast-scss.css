@@ -615,10 +615,11 @@ a, a:visited, a:active {
   .nav-bar::after {
     content: "";
     position: absolute;
-    margin-left: 50px;
+    margin-left: 20%;
     height: 3px;
-    width: calc(97% - 50px);
-    background-color: #B0A695;
+    width: 60%;
+    background: rgb(176, 166, 149);
+    background: radial-gradient(circle, rgb(176, 166, 149) 10%, rgba(0, 0, 0, 0) 100%);
     opacity: 50%;
     z-index: -1;
   }
@@ -651,7 +652,7 @@ a, a:visited, a:active {
     display: flex;
     flex-direction: row;
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   .x-scroller {
     width: 100%;
