@@ -104,7 +104,6 @@
       display: flex;
       flex-direction: column;
       overflow-y: hidden;
-  
   }
   
   
@@ -482,9 +481,9 @@
 
                   }
                   .search {
-                    padding: 15px 0 0 0;
+                    padding: 85px 0 0 0;
                   width: 95%;
-                  height: 200%; // Mettre une plus grande taille permet d'éviter le problème du scroll qui rebondit
+                  height: 250%; // Mettre une plus grande taille permet d'éviter le problème du scroll qui rebondit
                   align-items: baseline;
                   flex-direction: column;
                   border: none;
@@ -547,6 +546,14 @@
               }
           }
   
+          .blankBot {
+            border-color: #677956;
+            height: 50px;
+            width: 100%;
+            display: block;
+          }
+
+
           .contact {
             display: flex;
             opacity: 0;

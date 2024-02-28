@@ -439,9 +439,9 @@ a, a:visited, a:active {
     box-shadow: none;
   }
   .mainMenu .list .presScroller .scroller .search {
-    padding: 15px 0 0 0;
+    padding: 85px 0 0 0;
     width: 95%;
-    height: 200%;
+    height: 250%;
     align-items: baseline;
     flex-direction: column;
     border: none;
@@ -492,6 +492,12 @@ a, a:visited, a:active {
     height: 200px;
     padding: 30px 0 40px 0;
     align-self: center;
+  }
+  .mainMenu .list .blankBot {
+    border-color: #677956;
+    height: 50px;
+    width: 100%;
+    display: block;
   }
   .mainMenu .list .contact {
     display: flex;
