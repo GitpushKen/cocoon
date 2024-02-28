@@ -439,7 +439,7 @@ a, a:visited, a:active {
     box-shadow: none;
   }
   .mainMenu .list .presScroller .scroller .search {
-    padding: 25% 0 0 0;
+    padding: 30% 0 0 0;
     width: 95%;
     height: 250%;
     align-items: baseline;
