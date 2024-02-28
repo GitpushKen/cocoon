@@ -926,7 +926,7 @@ a, a:visited, a:active {
 }
 @media screen and (orientation: landscape) and (max-height: 1000px) {
   .about .container .texts .moi p {
-    font-size: 0.8rem;
+    font-size: 0.73rem;
   }
 }
 @media screen and (orientation: landscape) {
