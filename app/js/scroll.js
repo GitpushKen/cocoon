@@ -35,7 +35,7 @@ window.onload = (e) => {
 
 const watcher = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry)
+        
         if (entry.isIntersecting) {
             setTimeout(function(){entry.target.classList.add("show")},200);
     } else {
@@ -118,7 +118,7 @@ let soundToggle = new Audio("../../../assets/sounds/switch.wav")
   //// Music
 
 
-  const play = document.getElementById("lofi");
+  const played = document.getElementById("lofi");
   let audio = new Audio("../assets/sounds/Lofi-sample.mp3")
   let music = false; 
   
@@ -131,14 +131,14 @@ let soundToggle = new Audio("../../../assets/sounds/switch.wav")
       audio.volume = 0.25;
       music = true;
       console.log(music)
-      play.classList.toggle("active")
+      played.classList.toggle("active")
       document.getElementById('lofi').innerHTML =
       "Lofi : On";
   
       } else { 
           audio.pause()
           music = false;
-          play.classList.remove("active")
+          played.classList.remove("active")
           document.getElementById('lofi').innerHTML =
       "Lofi : Off";
   
@@ -216,7 +216,7 @@ function startKiller() {
 
     audio.pause()
         music = false;
-        play.classList.remove("active")
+        played.classList.remove("active")
         document.getElementById('lofi').innerHTML =
     "music : Off";
 }
