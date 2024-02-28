@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -79,6 +80,12 @@ a, a:visited, a:active {
        -moz-user-select: none;
             user-select: none;
   }
+  a {
+    text-decoration: none;
+    color: #41493a;
+    font-weight: 900;
+    font-family: "Infinite";
+  }
   .mobile {
     width: 100svw;
     height: 100svh;
@@ -151,7 +158,7 @@ a, a:visited, a:active {
     font-size: 1.7rem;
   }
   .nameBar p {
-    transform: translateY(-15px);
+    transform: translateY(-8px);
   }
   .testDiv {
     display: flex;
@@ -338,6 +345,7 @@ a, a:visited, a:active {
     width: 100%;
     font-family: "Pixelify Sans", sans-serif;
     color: #3f5137;
+    margin-top: 30px;
   }
   .mainMenu .stateBar {
     width: 100%;
@@ -345,7 +353,7 @@ a, a:visited, a:active {
     display: flex;
     flex-direction: row;
     margin: 0;
-    padding: 0;
+    padding: 0 10px 0 10px;
   }
   .mainMenu .stateBar #time {
     width: 50%;
@@ -375,6 +383,7 @@ a, a:visited, a:active {
     display: flex;
     flex-direction: column;
     margin-top: 0;
+    z-index: 1;
   }
   .mainMenu .list .presScroller {
     padding: 0;
@@ -405,7 +414,7 @@ a, a:visited, a:active {
     gap: 120px;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    font-family: "DM Sans", sans-serif;
+    font-family: "DMSans", sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     display: flex;
@@ -432,9 +441,9 @@ a, a:visited, a:active {
     box-shadow: none;
   }
   .mainMenu .list .presScroller .scroller .search {
-    padding: 15px 0 0 0;
+    padding: 50% 0 0 0;
     width: 95%;
-    height: 200%;
+    height: 250%;
     align-items: baseline;
     flex-direction: column;
     border: none;
@@ -483,8 +492,14 @@ a, a:visited, a:active {
   }
   .mainMenu .list .presScroller .scroller img {
     height: 200px;
-    padding: 30px 0 40px 0;
+    padding: 10px 0 40px 0;
     align-self: center;
+  }
+  .mainMenu .list .blankBot {
+    border-color: #677956;
+    height: 50px;
+    width: 100%;
+    display: block;
   }
   .mainMenu .list .contact {
     display: flex;
@@ -927,7 +942,7 @@ a, a:visited, a:active {
 }
 @media screen and (orientation: landscape) and (max-height: 1000px) {
   .about .container .texts .moi p {
-    font-size: 0.8rem;
+    font-size: 0.73rem;
   }
 }
 @media screen and (orientation: landscape) {

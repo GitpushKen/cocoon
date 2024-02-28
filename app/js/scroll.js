@@ -35,7 +35,6 @@ window.onload = (e) => {
 
 const watcher = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry)
         if (entry.isIntersecting) {
             setTimeout(function(){entry.target.classList.add("show")},200);
     } else {
@@ -118,29 +117,31 @@ let soundToggle = new Audio("../../../assets/sounds/switch.wav")
   //// Music
 
 
-  const play = document.getElementById("lofi");
-  let audio = new Audio("../../assets/sounds/Lofi-sample.mp3")
+  const played = document.getElementById("lofi");
+  let audio = new Audio("assets/sounds/lofi.mp3");
   let music = false; 
   
   document.getElementById('lofi').innerHTML =
       "Lofi : Off";
   
+    played.addEventListener("click", playMusic)
+
   function playMusic() {
       if (!music) {;
       audio.play()
       audio.volume = 0.25;
       music = true;
       console.log(music)
-      play.classList.toggle("active")
+      played.classList.toggle("active")
       document.getElementById('lofi').innerHTML =
-      "Lofi : On";
+      "Music : On";
   
       } else { 
           audio.pause()
           music = false;
-          play.classList.remove("active")
+          played.classList.remove("active")
           document.getElementById('lofi').innerHTML =
-      "Lofi : Off";
+      "Music : Off";
   
       }
   }
@@ -153,7 +154,7 @@ let soundToggle = new Audio("../../../assets/sounds/switch.wav")
 
 //// Booting
 
-let bootAudio = new Audio("../../assets/sounds/bootup.mp3")
+let bootAudio = new Audio("../../../assets/sounds/bootup.mp3")
 let bootUp = document.getElementById("bootUp")
 let miniMe = document.querySelector(".miniMe")
 let titled = document.querySelector(".titled")
@@ -185,7 +186,7 @@ function started() {
 
 //// Menu principal
 
-clickSound = new Audio("../assets/sounds/click.mp3")
+clickSound = new Audio("../../../assets/sounds/click.mp3")
 
 let startBtn = document.getElementById("starter")
 let titleScreen = document.querySelector(".main")
@@ -216,7 +217,7 @@ function startKiller() {
 
     audio.pause()
         music = false;
-        play.classList.remove("active")
+        played.classList.remove("active")
         document.getElementById('lofi').innerHTML =
     "music : Off";
 }
