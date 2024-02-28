@@ -111,7 +111,7 @@ nav2Scrolled.addEventListener("click", toggleAbout)
 nav3Scrolled.addEventListener("click", toggleContact)
 
 
-let soundToggle = new Audio("../../../assets/sounds/switch.wav")
+let soundToggle = new Audio("assets/sounds/switch.wav")
 
 
   //// Music
@@ -154,7 +154,7 @@ let soundToggle = new Audio("../../../assets/sounds/switch.wav")
 
 //// Booting
 
-let bootAudio = new Audio("../../../assets/sounds/bootup.mp3")
+let bootAudio = new Audio("assets/sounds/bootup.mp3")
 let bootUp = document.getElementById("bootUp")
 let miniMe = document.querySelector(".miniMe")
 let titled = document.querySelector(".titled")
@@ -163,12 +163,15 @@ let bootEnd = false;
 
 window.onload = (e) => {
     
+    if(window.innerHeight > window.innerWidth){
         boot();
+    }
+     
     
 }
 
 function boot() {
-
+    bootAudio.play()
     bootAudio.volume = 0.20;
     bootEnd = true;
     miniMe.classList.toggle("active");
@@ -186,7 +189,7 @@ function started() {
 
 //// Menu principal
 
-clickSound = new Audio("../../../assets/sounds/click.mp3")
+clickSound = new Audio("assets/sounds/click.mp3")
 
 let startBtn = document.getElementById("starter")
 let titleScreen = document.querySelector(".main")
