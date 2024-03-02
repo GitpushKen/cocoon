@@ -446,15 +446,16 @@
               .scroller {
                   width: 95%;
                   height: 100%;
+                  margin-top: 20px;
                   box-shadow: none;
                   padding: 10px 0 0 0;
                   flex-direction: column;
                   border: none;
                   gap: 120px;
                   overflow-y: scroll;
-                  scroll-snap-type: y mandatory;
+
                   font-family: "DMSans", sans-serif;
-                  font-size: 1.3rem;
+                  font-size: 1.2rem;
                   font-weight: 700;
                   display: flex;
                   align-items: center;
@@ -464,18 +465,20 @@
                   .intro {
                   padding: 15px 0 0 0;
                   width: 95%;
-                  height: 97%;
+                  height: 80%;
                   align-items: baseline;
                   flex-direction: column;
                   border: none;
                   box-shadow: none;
-                  scroll-snap-align: center;
+                  scroll-snap-align: start;
                   }
   
                   .moi {
                     padding: 15px 0 0 0;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
                   width: 95%;
-                  height: 100%; // Mettre une plus grande taille permet d'éviter le problème du scroll qui rebondit
+                  height: 120%; // Mettre une plus grande taille permet d'éviter le problème du scroll qui rebondit
                   align-items: baseline;
                   flex-direction: column;
                   border: none;
@@ -484,7 +487,9 @@
 
                   }
                   .search {
-                    padding: 50% 0 0 0;
+                    padding: 15px 0 0 0;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
                     width: 95%;
                     height: 250%; // Mettre une plus grande taille permet d'éviter le problème du scroll qui rebondit
                     align-items: baseline;
@@ -499,32 +504,31 @@
                   flex-direction: column;
                   border: none;
                   scroll-snap-align: start;
-                  margin-top: 30px;
+                  margin-top: 15px;
                       background-color: #3f5137;
                       color: #677956;
                       border-radius: 5px;
-                      font-size: 1.25rem;
+                      font-size: 1.15rem;
                       padding: 0;
                       box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.1);
                   
                   }
   
                   #cocoon {
-                    margin-top: 15px;
                       background-color: #3f5137;
                       color: #677956;
                       padding: 20px;
                       border-radius: 5px;
-                      font-size: 1.25rem;
+                      font-size: 1.15rem;
                       box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.1);
                   }
                   #cocoon2 {
-
+                    
                       background-color: #3f5137;
                       color: #677956;
                       padding: 20px;
                       border-radius: 5px;
-                      font-size: 1.25rem;
+                      font-size: 1.15rem;
                      
                   }
                   #disclaimer {
@@ -535,7 +539,7 @@
                       align-self: center;
                       border-radius: 5px;
                       width: 95%;
-                      font-size: 1.25rem;
+                      font-size: 1.15rem;
                       box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.1);
                   }
                   
@@ -711,7 +715,7 @@
               height:3px;
               width: 60%;
               background: rgb(176,166,149);
-background: radial-gradient(circle, rgba(176,166,149,1) 10%, rgba(0,0,0,0) 100%);
+              background: radial-gradient(circle, rgba(176,166,149,1) 10%, rgba(0,0,0,0) 100%);
               opacity: 50%;
 
               
