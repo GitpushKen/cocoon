@@ -462,8 +462,7 @@
                   font-weight: 700;
                   display: flex;
                   align-items: center;
-
-  
+ 
                   
                   .intro {
                   padding: 15px 0 0 0;
@@ -478,6 +477,8 @@
 
                   @media screen and (max-width:365px) {
                     height: 155%;
+
+
                   }
 
                   @media screen and (min-width:390px) {
@@ -518,6 +519,14 @@
                   scroll-snap-align: start;
                   box-shadow: none;
 
+                  @media screen and (max-width:365px) {
+                    height: 165%;
+
+                    @media screen and (max-height:741) {
+                      height: 175%;
+                    }
+                  }
+
                   @media screen and (min-width:700px) {
                     height: 90%;
 
@@ -526,25 +535,17 @@
                     }
                   }
 
-                  @media screen and (min-width:390px) {
+                  @media screen and (min-width:390px) and (min-height:840px) {
                     height: 120%;
 
-                    @media screen and (min-height:840px) {
-                      height: 130%;
-                     }
                   }
                   @media screen and (min-width:410px) {
                     height: 120%;
                     
-                    
-                    @media screen and (max-height:765px) {
-                      height: 140%;
-                     }
                   }
 
-                  @media screen and (max-width:365px) {
-                    height: 165%;
-                  }
+
+
 
                   @media screen and (max-width:380px) and (max-height:670px) {
                     height: 175%;
