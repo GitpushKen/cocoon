@@ -385,6 +385,9 @@ a, a:visited, a:active {
     margin-top: 0;
     z-index: 1;
   }
+  .mainMenu .list div {
+    box-shadow: none;
+  }
   .mainMenu .list .presScroller {
     padding: 0;
     position: absolute;
@@ -406,13 +409,12 @@ a, a:visited, a:active {
   }
   .mainMenu .list .presScroller .scroller {
     width: 95%;
-    height: 100%;
-    margin-top: 20px;
+    height: 90%;
+    margin-top: 40px;
     box-shadow: none;
     padding: 10px 0 0 0;
     flex-direction: column;
     border: none;
-    gap: 120px;
     overflow-y: scroll;
     font-family: "DMSans", sans-serif;
     font-size: 1.2rem;
@@ -423,25 +425,61 @@ a, a:visited, a:active {
   .mainMenu .list .presScroller .scroller .intro {
     padding: 15px 0 0 0;
     width: 95%;
-    height: 80%;
+    height: 135%;
+    gap: 20px;
     align-items: baseline;
     flex-direction: column;
     border: none;
     box-shadow: none;
     scroll-snap-align: start;
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 390px) {
+  .mainMenu .list .presScroller .scroller .intro {
+    height: 100%;
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 390px) and (min-height: 840px) {
+  .mainMenu .list .presScroller .scroller .intro {
+    height: 120%;
+  }
+}
+@media screen and (orientation: portrait) {
+  .mainMenu .list .presScroller .scroller .intro h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  .mainMenu .list .presScroller .scroller .intro #p1 {
+    font-size: 1.45rem;
   }
   .mainMenu .list .presScroller .scroller .moi {
     padding: 15px 0 0 0;
     margin-top: 20px;
-    margin-bottom: 20px;
     width: 95%;
-    height: 120%;
+    height: 145%;
     align-items: baseline;
     flex-direction: column;
     border: none;
     scroll-snap-align: start;
     box-shadow: none;
   }
+}
+@media screen and (orientation: portrait) and (min-width: 390px) {
+  .mainMenu .list .presScroller .scroller .moi {
+    height: 120%;
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 390px) and (min-height: 840px) {
+  .mainMenu .list .presScroller .scroller .moi {
+    height: 130%;
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 410px) {
+  .mainMenu .list .presScroller .scroller .moi {
+    height: 120%;
+  }
+}
+@media screen and (orientation: portrait) {
   .mainMenu .list .presScroller .scroller .search {
     padding: 15px 0 0 0;
     margin-top: 20px;
@@ -453,6 +491,13 @@ a, a:visited, a:active {
     border: none;
     scroll-snap-align: start;
   }
+}
+@media screen and (orientation: portrait) and (min-width: 390px) {
+  .mainMenu .list .presScroller .scroller .search {
+    height: 100%;
+  }
+}
+@media screen and (orientation: portrait) {
   .mainMenu .list .presScroller .scroller .final {
     width: 100%;
     height: 200%;
@@ -568,7 +613,6 @@ a, a:visited, a:active {
     align-items: center;
     border: 5px solid #3f5137;
     padding-left: 10px;
-    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.1);
     transition: transform 0.7s;
   }
   .crt::before {

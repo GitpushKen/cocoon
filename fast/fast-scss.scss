@@ -422,6 +422,10 @@
           flex-direction: column;
           margin-top: 0;
           z-index: 1;
+
+          div {
+            box-shadow: none;
+          }
           
           .presScroller {
               padding: 0;
@@ -445,13 +449,12 @@
   
               .scroller {
                   width: 95%;
-                  height: 100%;
-                  margin-top: 20px;
+                  height: 90%;
+                  margin-top: 40px;
                   box-shadow: none;
                   padding: 10px 0 0 0;
                   flex-direction: column;
                   border: none;
-                  gap: 120px;
                   overflow-y: scroll;
 
                   font-family: "DMSans", sans-serif;
@@ -465,25 +468,53 @@
                   .intro {
                   padding: 15px 0 0 0;
                   width: 95%;
-                  height: 80%;
+                  height: 135%;
+                  gap: 20px;
                   align-items: baseline;
                   flex-direction: column;
                   border: none;
                   box-shadow: none;
                   scroll-snap-align: start;
+
+                  @media screen and (min-width:390px) {
+                    height: 100%;
+                    
+                     @media screen and (min-height:840px) {
+                      height: 120%;
+                     }
+                  }
+
+                  h3 {
+                    font-size: 2rem;
+                    margin-bottom: 15px;
+                  }
+
+                  #p1 {
+                    font-size: 1.45rem;
+                  }
                   }
   
                   .moi {
                     padding: 15px 0 0 0;
                     margin-top: 20px;
-                    margin-bottom: 20px;
                   width: 95%;
-                  height: 120%; // Mettre une plus grande taille permet d'éviter le problème du scroll qui rebondit
+                  height: 145%; // Mettre une plus grande taille permet d'éviter le problème du scroll qui rebondit
                   align-items: baseline;
                   flex-direction: column;
                   border: none;
                   scroll-snap-align: start;
                   box-shadow: none;
+
+                  @media screen and (min-width:390px) {
+                    height: 120%;
+
+                    @media screen and (min-height:840px) {
+                      height: 130%;
+                     }
+                  }
+                  @media screen and (min-width:410px) {
+                    height: 120%;
+                  }
 
                   }
                   .search {
@@ -496,6 +527,10 @@
                     flex-direction: column;
                     border: none;
                     scroll-snap-align: start;
+
+                    @media screen and (min-width:390px) {
+                      height: 100%;
+                    }
                   }
                   .final {
                   width: 100%;
@@ -636,7 +671,6 @@
                   align-items: center;
                   border: 5px solid #3f5137;
                   padding-left: 10px;
-                  box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.1);
                   transition: transform 0.7s;
   
                   
