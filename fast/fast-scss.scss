@@ -462,6 +462,10 @@
                   font-weight: 700;
                   display: flex;
                   align-items: center;
+
+                  @media screen and (max-height:640px) {
+                    height: 105%;
+                  }
  
                   
                   .intro {
@@ -477,8 +481,10 @@
 
                   @media screen and (max-width:365px) {
                     height: 155%;
+                  }
 
-
+                  @media screen and (max-height:640px) {
+                    height: 165%;
                   }
 
                   @media screen and (min-width:390px) {
@@ -521,8 +527,8 @@
 
                   @media screen and (max-width:365px) {
                     height: 165%;
-
-                    @media screen and (max-height:741) {
+                    
+                    @media screen and (max-height:640px) {
                       height: 175%;
                     }
                   }
