@@ -300,7 +300,7 @@ function toggleWho() {
     if (howOn) {
         iconMail2.classList.remove("active");
     }
-
+    backBtn.classList.toggle("inactive");
     how.classList.remove("active");
     what.classList.remove("active");
     panelPro.classList.remove("active")
@@ -335,7 +335,7 @@ function toggleWhat() {
     } else {
         how.classList.toggle("down")
     }*/
-
+    backBtn.classList.toggle("inactive");
     who.classList.remove("active");
     how.classList.remove("active");
 }
@@ -350,6 +350,7 @@ function toggleHow() {
     howOn = true;
     who.classList.remove("active");
     what.classList.remove("active");
+    backBtn.classList.toggle("inactive");
 
 }
 

@@ -637,6 +637,9 @@ a, a:visited, a:active {
     animation: blink 3s ease-in-out infinite;
     z-index: 1000;
   }
+  .mainMenu .list .backTo.inactive {
+    display: none;
+  }
   @keyframes blink {
     0% {
       opacity: 0;
