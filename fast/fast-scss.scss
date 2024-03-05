@@ -381,21 +381,32 @@
           width: 100%;
           height: 60px;
           display: flex;
+          justify-content: space-between;
           flex-direction: row;
           margin: 0;
           padding: 0 10px 0 10px;
 
   
           #time {
-              width: 50%;
+              width: auto;
               height: 60px;
               padding: 10px 0 7px 7px;
               display: flex;
               align-items: center;
           }
   
+          #sound-btn {
+              width: auto;
+              height: 60px;
+              display: flex;
+              align-items: center;
+              justify-content: right;
+              text-align: right;
+              padding-right: 7px;
+          }
+
           #lofi {
-              width: 50%;
+              width: auto;
               height: 60px;
               display: flex;
               align-items: center;
@@ -657,6 +668,26 @@
               object-fit: contain;
             }
           }
+
+          .backTo {
+            border: none;
+            justify-content: center;
+            margin-bottom: 30px;
+            animation: blink 3s ease-in-out infinite;
+            z-index: 1000;
+
+            @keyframes blink {
+              0% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+          }
           
   .panelProject {
     display: none;
@@ -693,6 +724,7 @@
                   transform: translateY(100svh);
               transition: 0.7s;
               z-index: 10;
+              opacity: 0;
               }
   
               

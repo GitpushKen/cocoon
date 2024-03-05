@@ -132,14 +132,12 @@ let soundToggle = new Audio("assets/sounds/switch.wav")
       audio.volume = 0.25;
       music = true;
       console.log(music)
-      played.classList.toggle("active")
       document.getElementById('lofi').innerHTML =
       "Music : On";
   
       } else { 
           audio.pause()
           music = false;
-          played.classList.remove("active")
           document.getElementById('lofi').innerHTML =
       "Music : Off";
   
@@ -194,8 +192,32 @@ clickSound = new Audio("assets/sounds/click.mp3")
 let startBtn = document.getElementById("starter")
 let titleScreen = document.querySelector(".main")
 let mainMenu = document.querySelector(".mainMenu")
+const soundMenuBtn = document.getElementById("sound-btn")
+const backBtn = document.querySelector(".backTo")
 
+backBtn.addEventListener("click", backTitle)
 startBtn.addEventListener("click", start)
+soundMenuBtn.addEventListener("click", soundMenuToggle)
+
+
+let soundMenu = true;
+document.getElementById('sound-btn').innerHTML =
+        "Sounds : On";
+
+function soundMenuToggle() {
+    if (!soundMenu) {
+        soundMenu = true;
+        console.log("sound on")
+        document.getElementById('sound-btn').innerHTML =
+        "Sounds : On";
+    
+        } else if (soundMenu) { 
+            soundMenu = false;
+            document.getElementById('sound-btn').innerHTML =
+        "Sounds : Off";
+    
+        }
+}
 
 function start() {
     miniMe.classList.toggle("inactive");
@@ -203,8 +225,10 @@ function start() {
     setTimeout(function(){titleScreen.classList.toggle("inactive")},200);
     setTimeout(function(){mainMenu.classList.toggle("active")},200);
     setTimeout(startTime(), 550);
-    clickSound.play();
-    clickSound.volume = 0.20;
+    if (soundMenu) {
+        clickSound.play();
+        clickSound.volume = 0.20;
+    }
     startKiller();
 }
 
@@ -248,8 +272,10 @@ how.addEventListener("click", toggleHow);
 
 
 function toggleWho() {
-    clickSound.play();
-    clickSound.volume = 0.20;
+    if (soundMenu) {
+        clickSound.play();
+        clickSound.volume = 0.20;
+    }
     if (!whoOn) {   
         who.classList.toggle("active");
         pres.classList.toggle("active");
@@ -282,8 +308,10 @@ function toggleWho() {
 
 function toggleWhat() {
 
-    clickSound.play();
-    clickSound.volume = 0.20;
+    if (soundMenu) {
+        clickSound.play();
+        clickSound.volume = 0.20;
+    }
     if (!whatOn) {
         what.classList.toggle("active");
         panelPro.classList.toggle("active")
@@ -313,8 +341,10 @@ function toggleWhat() {
 }
 
 function toggleHow() {
-    clickSound.play();
-    clickSound.volume = 0.20;
+    if (soundMenu) {
+        clickSound.play();
+        clickSound.volume = 0.20;
+    }
     how.classList.toggle("active");
     iconMail2.classList.toggle("active");
     howOn = true;
@@ -357,3 +387,16 @@ const iconMail2 = document.querySelector(".contact")
 const panelPro = document.querySelector(".panelProject")
 
 iconMail2.addEventListener('click', sendMail)
+
+function backTitle() {
+    miniMe.classList.remove("inactive");
+    titled.classList.remove("inactive");
+    setTimeout(function(){titleScreen.classList.remove("inactive")},200);
+    setTimeout(function(){mainMenu.classList.remove("active")},200);
+    setTimeout(startTime(), 550);
+    if (soundMenu) {
+        clickSound.play();
+        clickSound.volume = 0.20;
+    }
+    startKiller();
+}

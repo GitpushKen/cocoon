@@ -351,19 +351,29 @@ a, a:visited, a:active {
     width: 100%;
     height: 60px;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     margin: 0;
     padding: 0 10px 0 10px;
   }
   .mainMenu .stateBar #time {
-    width: 50%;
+    width: auto;
     height: 60px;
     padding: 10px 0 7px 7px;
     display: flex;
     align-items: center;
   }
+  .mainMenu .stateBar #sound-btn {
+    width: auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+    padding-right: 7px;
+  }
   .mainMenu .stateBar #lofi {
-    width: 50%;
+    width: auto;
     height: 60px;
     display: flex;
     align-items: center;
@@ -620,6 +630,24 @@ a, a:visited, a:active {
     -o-object-fit: contain;
        object-fit: contain;
   }
+  .mainMenu .list .backTo {
+    border: none;
+    justify-content: center;
+    margin-bottom: 30px;
+    animation: blink 3s ease-in-out infinite;
+    z-index: 1000;
+  }
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
   .mainMenu .list .panelProject {
     display: none;
     opacity: 0;
@@ -651,6 +679,7 @@ a, a:visited, a:active {
     transform: translateY(100svh);
     transition: 0.7s;
     z-index: 10;
+    opacity: 0;
   }
   .mainMenu .list #how.down2 {
     transform: translateY(100svh);
