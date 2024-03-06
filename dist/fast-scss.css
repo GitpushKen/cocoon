@@ -71,6 +71,10 @@ a, a:visited, a:active {
   ::-webkit-scrollbar {
     display: none;
   }
+  a {
+    color: #273222;
+    font-family: "Infinite";
+  }
   .mobile {
     display: flex;
     width: 100svw;
@@ -116,8 +120,17 @@ a, a:visited, a:active {
     top: 30%;
     max-height: 40px;
     margin-top: 20px;
+    color: #3f5137;
     z-index: 1000;
+    font-family: "Pixelify Sans";
+    font-size: 1.5rem;
     overflow: hidden;
+    animation: scale 2s infinite ease-in-out;
+  }
+  @keyframes scale {
+    50% {
+      scale: 1.2;
+    }
   }
   .container-menu {
     display: none;
@@ -141,6 +154,7 @@ a, a:visited, a:active {
     gap: 7px;
     color: #3f5137;
     font-size: 1rem;
+    font-family: "Infinite 2";
   }
   .container-menu .container-items .group > * {
     color: #3f5137;
@@ -156,6 +170,7 @@ a, a:visited, a:active {
     color: #3f5137;
     align-items: center;
     border: solid 6px #3f5137;
+    font-family: "Pixelify Sans";
   }
   .container-menu .container-items .btn.active {
     background-color: #3f5137;
@@ -244,7 +259,9 @@ a, a:visited, a:active {
     position: absolute;
     bottom: 40px;
     animation: blink 3s ease-in-out infinite;
+    font-size: 1.5rem;
     z-index: 1000;
+    font-family: "Pixelify Sans";
   }
   .backTo.hidden {
     display: none;
@@ -304,6 +321,7 @@ a, a:visited, a:active {
     height: 20px;
     display: flex;
     justify-content: space-between;
+    font-family: "Pixelify Sans";
     flex-direction: row;
     margin: 0;
     padding: 0 10px 0 10px;

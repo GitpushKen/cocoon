@@ -50,6 +50,11 @@
       display: none;
   }
   
+  a {
+    color: #273222;
+    font-family: "Infinite";
+  }
+
   .mobile {
     display: flex;
     width: 100svw;
@@ -74,6 +79,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+    
 
     &.hidden {
         display: none;
@@ -103,8 +109,18 @@
         top: 30%;
         max-height: 40px;
         margin-top: 20px;
+        color: #3f5137;
         z-index: 1000;
+        font-family: "Pixelify Sans";
+        font-size: 1.5rem;
         overflow: hidden;
+        animation: scale 2s infinite ease-in-out;
+
+        @keyframes scale {
+          50% {
+            scale: 1.2;
+          }
+        }
     }
     
 }
@@ -135,6 +151,7 @@
         gap: 7px;
         color: #3f5137;
         font-size: 1rem;
+        font-family: "Infinite 2";
         
         .group > * {
             color: #3f5137;
@@ -152,6 +169,7 @@
             color: #3f5137;
             align-items: center;
             border: solid 6px #3f5137;
+            font-family: "Pixelify Sans";
 
             &.active {
                 background-color: #3f5137;
@@ -244,7 +262,9 @@
     position: absolute;
     bottom: 40px;
     animation: blink 3s ease-in-out infinite;
+    font-size: 1.5rem;
     z-index: 1000;
+    font-family: "Pixelify Sans";
 
     &.hidden {
       display: none;
@@ -316,6 +336,7 @@
     height: 20px;
     display: flex;
     justify-content: space-between;
+    font-family: "Pixelify Sans";
     flex-direction: row;
     margin: 0;
     padding: 0 10px 0 10px;
