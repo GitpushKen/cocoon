@@ -114,38 +114,7 @@ nav3Scrolled.addEventListener("click", toggleContact)
 let soundToggle = new Audio("assets/sounds/switch.wav")
 
 
-  //// Music
 
-
-  const played = document.getElementById("lofi");
-  let audio = new Audio("assets/sounds/lofi.mp3");
-  let music = false; 
-  
-  document.getElementById('lofi').innerHTML =
-      "Lofi : Off";
-  
-    played.addEventListener("click", playMusic)
-
-  function playMusic() {
-      if (!music) {;
-      audio.play()
-      audio.volume = 0.25;
-      music = true;
-      console.log(music)
-      document.getElementById('lofi').innerHTML =
-      "Music : On";
-  
-      } else { 
-          audio.pause()
-          music = false;
-          document.getElementById('lofi').innerHTML =
-      "Music : Off";
-  
-      }
-  }
-  
-  
-  
 
 
 ////// Mobile
@@ -188,12 +157,8 @@ function started() {
 //// Menu principal
 
 clickSound = new Audio("assets/sounds/click.mp3")
-
-let startBtn = document.getElementById("starter")
-let titleScreen = document.querySelector(".main")
-let mainMenu = document.querySelector(".mainMenu")
 const soundMenuBtn = document.getElementById("sound-btn")
-const backBtn = document.querySelector(".backTo")
+
 
 backBtn.addEventListener("click", backTitle)
 startBtn.addEventListener("click", start)
@@ -356,18 +321,7 @@ function toggleHow() {
 
 //// barre d'état
 
-function startTime() {
-    let today = new Date();
-    let h = today.getHours();
-    let m = today.getMinutes();
-    m = checkTime(m);
-    document.getElementById('time').innerHTML =
-    h + ":" + m;
-  }
-  function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
-  };
+
 
 
 //// Mail 

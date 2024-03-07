@@ -21,6 +21,33 @@ let who = false;
 let what = false;
 let how = false;
 
+
+clickSound = new Audio("assets/sounds/click.mp3")
+const soundMenuBtn = document.getElementById("sound-btn")
+
+
+
+soundMenuBtn.addEventListener("click", soundMenuToggle)
+let soundMenu = true;
+document.getElementById('sound-btn').innerHTML =
+        "Sounds : On";
+
+function soundMenuToggle() {
+    if (!soundMenu) {
+        soundMenu = true;
+        console.log("sound on")
+        document.getElementById('sound-btn').innerHTML =
+        "Sounds : On";
+    
+        } else if (soundMenu) { 
+            soundMenu = false;
+            document.getElementById('sound-btn').innerHTML =
+        "Sounds : Off";
+    
+        }
+}
+
+
 startBtn.addEventListener("click", startClicked)
 
 whoBtn.addEventListener("click", whoClicked)
@@ -33,6 +60,12 @@ backBtn.addEventListener("click", backClicked)
 function startClicked() {
     intro.classList.add("hidden");
     menu.classList.add("active");
+    if (soundMenu) {
+        clickSound.play();
+        clickSound.volume = 0.20;
+    }
+
+    startTime();
 }
 
 function whoClicked() {
@@ -41,6 +74,11 @@ function whoClicked() {
 
     howBtn.classList.remove("active")
     howBlock.classList.remove("visible")
+
+    if (soundMenu) {
+        clickSound.play();
+        clickSound.volume = 0.20;
+    }
 
 
     if (!who) {
@@ -66,6 +104,11 @@ function whoClicked() {
 }
 
 function whatClicked() {
+
+    if (soundMenu) {
+        clickSound.play();
+        clickSound.volume = 0.20;
+    }
 
     if (!what) {
 
@@ -94,6 +137,11 @@ function whatClicked() {
 
 function howClicked() {
 
+    if (soundMenu) {
+        clickSound.play();
+        clickSound.volume = 0.20;
+    }
+
     if (!how) {
         howBtn.classList.add("active")
         howBlock.classList.toggle("visible")
@@ -112,9 +160,30 @@ function howClicked() {
 }
 
 function backClicked() {
+
+    if (soundMenu) {
+        clickSound.play();
+        clickSound.volume = 0.20;
+    }
+    
     intro.classList.remove("hidden");
     menu.classList.remove("active");
 }
+
+//// time
+
+function startTime() {
+    let today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    m = checkTime(m);
+    document.getElementById('time').innerHTML =
+    h + ":" + m;
+  }
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  };
 
 
   //// Music

@@ -335,7 +335,7 @@ a, a:visited, a:active {
   }
   .stateBar #sound-btn {
     width: auto;
-    height: 40px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: right;
