@@ -114,105 +114,37 @@ nav3Scrolled.addEventListener("click", toggleContact)
 let soundToggle = new Audio("assets/sounds/switch.wav")
 
 
+  //// Music
 
 
+  const played = document.getElementById("lofi");
+  let audio = new Audio("assets/sounds/lofi.mp3");
+  let music = false; 
+  
+  document.getElementById('lofi').innerHTML =
+      "Lofi : Off";
+  
+    played.addEventListener("click", playMusic)
 
-////// Mobile
-
-//// Booting
-
-let bootAudio = new Audio("assets/sounds/bootup.mp3")
-let bootUp = document.getElementById("bootUp")
-let miniMe = document.querySelector(".miniMe")
-let titled = document.querySelector(".titled")
-
-let bootEnd = false;
-
-window.onload = (e) => {
-    
-    if(window.innerHeight > window.innerWidth){
-        boot();
-    }
-     
-    
-}
-
-function boot() {
-    bootAudio.play()
-    bootAudio.volume = 0.20;
-    bootEnd = true;
-    miniMe.classList.toggle("active");
-    titled.classList.toggle("active");
-    console.log(bootEnd)
-}
-
-setTimeout(function(){bootUp.classList.toggle("inactive")},2000);
-
-function started() {
-    bootUp.classList.toggle("inactive");
-    bootEnd = false;
-    console.log(bootEnd);
-}
-
-//// Menu principal
-
-clickSound = new Audio("assets/sounds/click.mp3")
-const soundMenuBtn = document.getElementById("sound-btn")
-
-
-backBtn.addEventListener("click", backTitle)
-startBtn.addEventListener("click", start)
-soundMenuBtn.addEventListener("click", soundMenuToggle)
-
-
-let soundMenu = true;
-document.getElementById('sound-btn').innerHTML =
-        "Sounds : On";
-
-function soundMenuToggle() {
-    if (!soundMenu) {
-        soundMenu = true;
-        console.log("sound on")
-        document.getElementById('sound-btn').innerHTML =
-        "Sounds : On";
-    
-        } else if (soundMenu) { 
-            soundMenu = false;
-            document.getElementById('sound-btn').innerHTML =
-        "Sounds : Off";
-    
-        }
-}
-
-function start() {
-    miniMe.classList.toggle("inactive");
-    titled.classList.toggle("inactive");
-    setTimeout(function(){titleScreen.classList.toggle("inactive")},200);
-    setTimeout(function(){mainMenu.classList.toggle("active")},200);
-    setTimeout(startTime(), 550);
-    if (soundMenu) {
-        clickSound.play();
-        clickSound.volume = 0.20;
-    }
-    startKiller();
-}
-
-function startKiller() {
-    how.classList.remove("active");
-    what.classList.remove("active");
-    who.classList.remove("active");
-    pres.classList.remove("active");
-
-    what.classList.remove("down");
-    how.classList.remove("down");
-    how.classList.remove("down2");
-
-    audio.pause()
-        music = false;
-        played.classList.remove("active")
-        document.getElementById('lofi').innerHTML =
-    "music : Off";
-}
+  function playMusic() {
+      if (!music) {;
+      audio.play()
+      audio.volume = 0.25;
+      music = true;
+      console.log(music)
+      played.classList.toggle("active")
+      document.getElementById('lofi').innerHTML =
+      "Music : On";
+  
+      } else { 
+          audio.pause()
+          music = false;
+          played.classList.remove("active")
+          document.getElementById('lofi').innerHTML =
+      "Music : Off";
+  
+      }
+  }
 
 
 // Menu principal -- Blocks
@@ -237,10 +169,8 @@ how.addEventListener("click", toggleHow);
 
 
 function toggleWho() {
-    if (soundMenu) {
-        clickSound.play();
-        clickSound.volume = 0.20;
-    }
+    clickSound.play();
+    clickSound.volume = 0.20;
     if (!whoOn) {   
         who.classList.toggle("active");
         pres.classList.toggle("active");
@@ -265,7 +195,7 @@ function toggleWho() {
     if (howOn) {
         iconMail2.classList.remove("active");
     }
-    backBtn.classList.toggle("inactive");
+
     how.classList.remove("active");
     what.classList.remove("active");
     panelPro.classList.remove("active")
@@ -273,10 +203,8 @@ function toggleWho() {
 
 function toggleWhat() {
 
-    if (soundMenu) {
-        clickSound.play();
-        clickSound.volume = 0.20;
-    }
+    clickSound.play();
+    clickSound.volume = 0.20;
     if (!whatOn) {
         what.classList.toggle("active");
         panelPro.classList.toggle("active")
@@ -300,28 +228,36 @@ function toggleWhat() {
     } else {
         how.classList.toggle("down")
     }*/
-    backBtn.classList.toggle("inactive");
+
     who.classList.remove("active");
     how.classList.remove("active");
 }
 
 function toggleHow() {
-    if (soundMenu) {
-        clickSound.play();
-        clickSound.volume = 0.20;
-    }
+    clickSound.play();
+    clickSound.volume = 0.20;
     how.classList.toggle("active");
     iconMail2.classList.toggle("active");
     howOn = true;
     who.classList.remove("active");
     what.classList.remove("active");
-    backBtn.classList.toggle("inactive");
 
 }
 
 //// barre d'état
 
-
+function startTime() {
+    let today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    m = checkTime(m);
+    document.getElementById('time').innerHTML =
+    h + ":" + m;
+  }
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  };
 
 
 //// Mail 
@@ -342,17 +278,3 @@ const iconMail2 = document.querySelector(".contact")
 const panelPro = document.querySelector(".panelProject")
 
 iconMail2.addEventListener('click', sendMail)
-
-function backTitle() {
-    miniMe.classList.remove("inactive");
-    titled.classList.remove("inactive");
-    setTimeout(function(){titleScreen.classList.remove("inactive")},200);
-    setTimeout(function(){mainMenu.classList.remove("active")},200);
-    setTimeout(startTime(), 550);
-    if (soundMenu) {
-        clickSound.play();
-        clickSound.volume = 0.20;
-    }
-    startKiller();
-}
-
